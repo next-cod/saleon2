@@ -112,10 +112,9 @@
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
-    background-image:
-      radial-gradient(1000px 600px at 50% -200px, oklch(0.92 0.08 264 / 0.5), transparent 60%);
   }
   h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+
 }
 
 @layer utilities {
