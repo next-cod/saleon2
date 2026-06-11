@@ -179,7 +179,6 @@ function Index() {
     <div id="top" className="min-h-screen overflow-x-clip bg-background text-foreground">
       <Header />
       <Hero />
-      <ChatPreview />
       <StatsBar />
       <Problems />
       <Personas />
@@ -194,6 +193,7 @@ function Index() {
     </div>
   );
 }
+
 
 /* ---------- header ---------- */
 
