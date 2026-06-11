@@ -455,22 +455,18 @@ function Problems() {
     <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
       <SectionLabel kicker="Проблема" title="Где бизнес теряет клиентов" />
       <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {PROBLEMS.map((p, i) => (
+        {PROBLEMS.map((p) => (
           <article key={p.n}
             className="group relative overflow-hidden rounded-3xl border border-border bg-surface p-7 shadow-sm transition hover:shadow-elev hover:-translate-y-1">
             <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary-soft/70 blur-2xl transition group-hover:scale-125" />
-            <div className="relative flex items-start justify-between">
-              <span className="font-display text-5xl font-extrabold text-primary/15 group-hover:text-primary/30 transition">
-                {p.n}
-              </span>
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary-soft text-primary">
-                <ProblemIcon i={i} />
-              </span>
-            </div>
+            <span className="relative font-display text-5xl font-extrabold text-primary/20 group-hover:text-primary/40 transition">
+              {p.n}
+            </span>
             <h3 className="relative mt-4 font-display text-xl font-bold text-ink">{p.t}</h3>
             <p className="relative mt-2 text-sm text-muted-foreground">{p.d}</p>
           </article>
         ))}
+
       </div>
 
       <div className="mt-12 rounded-3xl border border-primary/20 bg-gradient-to-br from-primary-soft/60 to-transparent p-8 text-center">
