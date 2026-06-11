@@ -479,17 +479,8 @@ function Problems() {
   );
 }
 
-function ProblemIcon({ i }: { i: number }) {
-  const paths = [
-    "M12 6v6l4 2", // clock
-    "M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z", // chat
-    "M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z", // burn/star
-    "M3 12h4l3-8 4 16 3-8h4", // signal
-    "M20 21v-2a4 4 0 0 0-3-3.87M4 21v-2a4 4 0 0 1 3-3.87M12 7a4 4 0 1 1 0 8 4 4 0 0 1 0-8z", // user
-    "M4 6h16v10H6l-2 2z", // bot bubble
-  ];
-  return <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d={paths[i]}/></svg>;
-}
+
+
 
 /* ---------- personas ---------- */
 
