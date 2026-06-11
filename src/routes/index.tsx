@@ -248,15 +248,9 @@ function Header() {
 function Hero() {
   return (
     <section className="relative isolate">
-      <div className="absolute inset-0 -z-10 bg-mesh" />
-      <div className="absolute inset-x-0 top-0 -z-10 h-[600px] bg-grid" />
-      <BlobA className="pointer-events-none absolute -left-32 top-10 -z-10 h-[440px] w-[440px] opacity-70 float-y" />
-      <BlobB className="pointer-events-none absolute -right-32 top-20 -z-10 h-[420px] w-[420px] opacity-70 float-y [animation-delay:1.2s]" />
-
       <div className="mx-auto grid max-w-7xl gap-10 px-5 pb-20 pt-14 sm:px-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 lg:pt-24">
         <div className="fade-up">
-          <Eyebrow>Цифровой сотрудник · v2</Eyebrow>
-          <h1 className="mt-5 font-display text-5xl font-extrabold leading-[1.02] tracking-tight text-ink sm:text-6xl lg:text-[5.2rem]">
+          <h1 className="font-display text-5xl font-extrabold leading-[1.02] tracking-tight text-ink sm:text-6xl lg:text-[5.2rem]">
             Познакомьтесь —<br />
             это ваш новый{" "}
             <span className="relative inline-block">
@@ -303,67 +297,118 @@ function Hero() {
           </div>
         </div>
 
-        {/* Hero card with avatar */}
-        <div className="relative fade-up [animation-delay:0.15s]">
-          <div className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-gradient-to-br from-primary/15 via-transparent to-primary/10 blur-2xl" />
-          <div className="relative rounded-[2rem] border border-border bg-surface p-6 shadow-elev">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2 text-xs font-semibold text-muted-foreground">
-                <span className="relative inline-block h-2 w-2 rounded-full bg-mint">
-                  <span className="absolute inset-0 animate-ping rounded-full bg-mint/70" />
-                </span>
-                Сейчас в чате
-              </div>
-              <div className="flex gap-1">
-                {["#FF6B6B", "#F2C94C", "#27D17F"].map((c) => (
-                  <span key={c} className="h-2.5 w-2.5 rounded-full" style={{ background: c }} />
-                ))}
-              </div>
-            </div>
-
-            <div className="relative mt-6 flex flex-col items-center text-center">
-              <div className="pulse-ring relative inline-flex h-40 w-40 items-center justify-center rounded-full bg-gradient-primary p-1.5 shadow-glow">
-                <div className="flex h-full w-full items-center justify-center rounded-full bg-surface">
-                  <img src={avatar} alt="Saleon" className="h-32 w-32 rounded-full object-cover" />
-                </div>
-              </div>
-              <div className="mt-5 font-display text-2xl font-extrabold text-ink">Сэйлон</div>
-              <div className="text-sm text-muted-foreground">цифровой сотрудник · отвечает за 3 сек</div>
-            </div>
-
-            <div className="mt-6 space-y-2.5">
-              <div className="ml-auto max-w-[78%] rounded-2xl rounded-tr-md bg-primary-soft px-4 py-2.5 text-sm text-ink">
-                Привет, расскажи, что вы умеете?
-              </div>
-              <div className="mr-auto max-w-[85%] rounded-2xl rounded-tl-md bg-gradient-primary px-4 py-2.5 text-sm text-primary-foreground shadow-soft">
-                Привет! Я Сэйлон. Помогу собрать бота под ваш бизнес — за 3 дня. С чего начнём?
-              </div>
-              <div className="flex flex-wrap gap-2 pt-1">
-                {["Что входит?", "Сколько стоит?", "Хочу попробовать"].map((c) => (
-                  <span key={c} className="rounded-full border border-primary/20 bg-surface px-3 py-1.5 text-xs font-semibold text-primary">
-                    {c}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* floating badges */}
-          <div className="absolute -left-6 top-10 hidden rounded-2xl border border-border bg-surface px-3 py-2 text-xs font-semibold shadow-soft lg:flex items-center gap-2 float-y">
-            <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-mint/15 text-mint">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </span>
-            до 80% обращений
-          </div>
-          <div className="absolute -right-4 bottom-16 hidden rounded-2xl border border-border bg-surface px-3 py-2 text-xs font-semibold shadow-soft lg:flex items-center gap-2 float-y [animation-delay:0.8s]">
-            <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary-soft text-primary">⚡</span>
-            ответ за 3 сек
-          </div>
-        </div>
+        <HeroChat />
       </div>
     </section>
   );
 }
+
+const HERO_CHATS = [
+  {
+    id: "sem", name: "СЭМ", niche: "Фотостудия", img: sem,
+    messages: [
+      { side: "r", text: "Привет, а что вы вообще предлагаете?" },
+      { side: "l", text: "Привет, красотка! Я СЭМ, помощник фотостудии. Расскажи, что интересует — подберу лучший вариант." },
+      { side: "r", text: "А циклорама большая? Реквизит есть?" },
+      { side: "l", text: "Циклорама 6×4 — для ростовых кадров идеально. Реквизит даём бесплатно. Скинуть примеры?" },
+    ],
+    chips: ["Скинь примеры", "Записаться", "Сколько стоит?"],
+  },
+  {
+    id: "padik", name: "ПАДИК", niche: "Падел-центр", img: padik,
+    messages: [
+      { side: "r", text: "Привет, хочу попробовать падел. Я новичок." },
+      { side: "l", text: "Дружище, это лучшее решение! Падел — самый быстро усваиваемый вид спорта. Есть пробный слот завтра в 18:00 — залетай!" },
+      { side: "r", text: "А ракетку нужно свою брать?" },
+      { side: "l", text: "Нет, у нас всё есть — ракетки, мячи, обувь. Записать тебя на завтра?" },
+    ],
+    chips: ["Да, записать!", "Другое время", "Цены"],
+  },
+  {
+    id: "glasha", name: "ГЛАША", niche: "Цветы", img: glasha,
+    messages: [
+      { side: "r", text: "Здравствуйте, нужен букет на день рождения мамы." },
+      { side: "l", text: "Ой, как мило! Мама романтичная или скорее строгая? Подберу что-то, что точно тронет." },
+      { side: "r", text: "Романтичная, любит пионы." },
+      { side: "l", text: "Тогда соберу облако пионов с эвкалиптом. Доставим к 12:00. Адрес скиньте?" },
+    ],
+    chips: ["Хочу такой", "Другие варианты", "Цена"],
+  },
+  {
+    id: "kirillych", name: "КИРИЛЛЫЧ", niche: "Автосервис", img: kirillych,
+    messages: [
+      { side: "r", text: "Стучит спереди при кочках. Что делать?" },
+      { side: "l", text: "Похоже на стойки или сайлентблоки. Диагностика бесплатно. Суббота 9:00 — подходит?" },
+      { side: "r", text: "Подходит. По деньгам как?" },
+      { side: "l", text: "После диагностики скажу точно. Обычно от 4 до 12 тыс — зависит от того, что найдём." },
+    ],
+    chips: ["Записать", "Другое время", "Адрес"],
+  },
+  {
+    id: "lusya", name: "ЛЮСЯ", niche: "Салон красоты", img: lusya,
+    messages: [
+      { side: "r", text: "Хочу осветлиться, но боюсь за волосы." },
+      { side: "l", text: "Подруга, понимаю! Сделаем щадящее окрашивание Olaplex — волосы будут целы. Завтра есть 14:30 — идеальное время." },
+      { side: "r", text: "А сколько по времени?" },
+      { side: "l", text: "Часа 3–4. Зато результат — на месяцы. Записать?" },
+    ],
+    chips: ["Записать", "Подробнее", "Цена"],
+  },
+];
+
+function HeroChat() {
+  const [id, setId] = useState(HERO_CHATS[0].id);
+  const chat = HERO_CHATS.find((c) => c.id === id)!;
+  return (
+    <div className="relative fade-up [animation-delay:0.15s]">
+      <div className="relative rounded-[2rem] border border-border bg-surface p-5 shadow-elev sm:p-6">
+        {/* persona tabs */}
+        <div className="flex gap-2 overflow-x-auto pb-3">
+          {HERO_CHATS.map((c) => {
+            const active = c.id === id;
+            return (
+              <button key={c.id} onClick={() => setId(c.id)}
+                className={`flex shrink-0 items-center gap-2 rounded-full border px-2.5 py-1.5 text-xs font-semibold transition
+                  ${active ? "border-primary bg-primary text-primary-foreground" : "border-border bg-background text-ink hover:border-primary/30"}`}>
+                <img src={c.img} alt="" className="h-5 w-5 rounded-full object-cover" />
+                {c.name}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* chat header */}
+        <div className="flex items-center justify-between border-t border-border pt-4">
+          <div className="flex items-center gap-3">
+            <img src={chat.img} alt="" className="h-11 w-11 rounded-full object-cover ring-2 ring-primary/20" />
+            <div>
+              <div className="font-display text-base font-extrabold text-ink">{chat.name}</div>
+              <div className="text-xs text-muted-foreground">{chat.niche} · онлайн</div>
+            </div>
+          </div>
+          <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-mint">
+            <span className="absolute inset-0 animate-ping rounded-full bg-mint/70" />
+          </span>
+        </div>
+
+        {/* messages */}
+        <div className="mt-4 space-y-2.5">
+          {chat.messages.map((m, i) => (
+            <Bubble key={i} side={m.side as "l" | "r"}>{m.text}</Bubble>
+          ))}
+          <div className="flex flex-wrap gap-2 pt-1">
+            {chat.chips.map((c) => (
+              <span key={c} className="rounded-full border border-primary/20 bg-surface px-3 py-1 text-xs font-semibold text-primary">
+                {c}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 
 /* ---------- chat preview row ---------- */
 
