@@ -9,7 +9,7 @@ import lusya from "@/assets/saleon/lusya.png";
 import bars from "@/assets/saleon/bars.png";
 import maks from "@/assets/saleon/maks.png";
 import maxIcon from "@/assets/saleon/max-icon.png";
-import { BlobA, BlobB, Sparkle, Squiggle, ArrowHand } from "@/components/saleon/Decor";
+import { Squiggle } from "@/components/saleon/Decor";
 
 export const Route = createFileRoute("/")({
   head: () => ({
