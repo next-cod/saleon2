@@ -160,17 +160,17 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
   );
 }
 
-function SectionLabel({ kicker, title, children }: { kicker: string; title: string; children?: React.ReactNode }) {
+function SectionLabel({ title, children }: { kicker?: string; title: string; children?: React.ReactNode }) {
   return (
     <div className="mx-auto max-w-3xl text-center">
-      <Eyebrow>{kicker}</Eyebrow>
-      <h2 className="mt-4 font-display text-4xl font-extrabold tracking-tight text-ink sm:text-5xl text-balance">
+      <h2 className="font-display text-4xl font-extrabold tracking-tight text-ink sm:text-5xl text-balance">
         {title}
       </h2>
       {children && <p className="mt-4 text-base text-muted-foreground sm:text-lg text-pretty">{children}</p>}
     </div>
   );
 }
+
 
 /* ---------- page ---------- */
 
