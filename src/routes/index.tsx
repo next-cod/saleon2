@@ -922,16 +922,12 @@ function Contacts() {
   return (
     <section id="contacts" className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8">
       <div className="relative overflow-hidden rounded-[2.5rem] border border-border bg-surface p-6 shadow-elev sm:p-12">
-        <div className="pointer-events-none absolute inset-0 bg-mesh opacity-80" />
-        <BlobA className="pointer-events-none absolute -left-20 -top-20 h-80 w-80 opacity-50" />
-        <BlobB className="pointer-events-none absolute -right-20 -bottom-20 h-80 w-80 opacity-50" />
-
         <div className="relative grid gap-10 lg:grid-cols-[1fr_1.05fr]">
           <div>
-            <Eyebrow>Контакты</Eyebrow>
-            <h2 className="mt-4 font-display text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
+            <h2 className="font-display text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
               Запишитесь на созвон
             </h2>
+
             <p className="mt-4 max-w-md text-muted-foreground">
               Бесплатный созвон 30 минут — разберём вашу ситуацию, придумаем характер бота, покажем как это работает в вашей нише.
             </p>
