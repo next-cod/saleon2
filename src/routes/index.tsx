@@ -733,7 +733,7 @@ function Cases() {
       <div className="mt-12 grid gap-6 lg:grid-cols-2">
         {CASES.map((c) => (
           <article key={c.t} className="group relative overflow-hidden rounded-3xl border border-border bg-surface p-8 shadow-soft transition hover:-translate-y-1 hover:shadow-elev">
-            <BlobA className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 opacity-50 transition group-hover:scale-110" />
+            
             <div className="relative flex flex-wrap items-center gap-2">
               <span className="rounded-full bg-primary-soft px-3 py-1 text-xs font-semibold text-primary">{c.tag}</span>
               <span className="rounded-full border border-border bg-background px-3 py-1 text-xs font-semibold text-muted-foreground">{c.city}</span>
