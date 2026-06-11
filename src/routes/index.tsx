@@ -410,70 +410,8 @@ function HeroChat() {
 }
 
 
-/* ---------- chat preview row ---------- */
 
-function ChatPreview() {
-  return (
-    <section className="mx-auto max-w-7xl px-5 pb-10 sm:px-8" id="personas-preview">
-      <div className="relative rounded-[2rem] border border-border bg-surface p-6 shadow-soft sm:p-10">
-        <div className="absolute -top-3 right-8 hidden sm:block">
-          <div className="flex items-end gap-2">
-            <div className="font-display text-sm font-bold italic text-primary">
-              отвечает за 3 секунды,<br/>даже ночью
-            </div>
-            <ArrowHand className="h-12 w-16 text-primary" />
-          </div>
-        </div>
 
-        <div className="grid gap-6 lg:grid-cols-[1fr_1.1fr]">
-          <div className="rounded-2xl border border-border bg-background p-4 shadow-sm">
-            <div className="flex items-center gap-3 border-b border-border pb-3">
-              <img src={padik} alt="" className="h-10 w-10 rounded-full ring-2 ring-mint/30 object-cover" />
-              <div>
-                <div className="font-semibold text-ink">ПАДИК</div>
-                <div className="text-xs text-muted-foreground">Падел-центр · онлайн</div>
-              </div>
-            </div>
-            <div className="mt-4 space-y-2.5">
-              <Bubble side="r">Привет, хочу попробовать падел. Я вообще новичок</Bubble>
-              <Bubble side="l" green>
-                Дружище, это лучшее решение! Падел — самый быстро усваиваемый вид спорта. Уже через час будешь рубиться. Есть пробный слот завтра в 18:00 — залетай!
-              </Bubble>
-              <Bubble side="r">А ракетку нужно свою брать?</Bubble>
-              <Bubble side="l" green>
-                Нет, у нас всё есть — ракетки, мячи, аренда обуви. Просто приходи и играй. Записать тебя на завтра?
-              </Bubble>
-              <div className="flex flex-wrap gap-2 pt-1">
-                {["Да, записать!", "Другое время", "Цены"].map(c => (
-                  <span key={c} className="rounded-full border border-mint/30 bg-mint/10 px-3 py-1 text-xs font-semibold text-mint">{c}</span>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col justify-center">
-            <Eyebrow>Цифровые сотрудники</Eyebrow>
-            <h3 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
-              Разные характеры — под разный бизнес
-            </h3>
-            <p className="mt-3 text-muted-foreground">
-              Каждый сотрудник со своим тоном, словарём и сценариями. От падел-центра до ветклиники.
-            </p>
-            <div className="mt-5 flex flex-wrap gap-2">
-              {PERSONAS.map((p) => (
-                <a key={p.id} href="#personas"
-                  className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1.5 text-xs font-semibold text-ink shadow-sm transition hover:border-primary/30 hover:text-primary">
-                  <img src={p.img} alt="" className="h-5 w-5 rounded-full object-cover" />
-                  {p.name}
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Bubble({ children, side, green }: { children: React.ReactNode; side: "l" | "r"; green?: boolean }) {
   const isR = side === "r";
