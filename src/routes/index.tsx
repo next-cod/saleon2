@@ -151,14 +151,8 @@ function Logo() {
   );
 }
 
-function Eyebrow({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-primary-soft/60 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-      <Sparkle className="h-3 w-3" />
-      {children}
-    </div>
-  );
-}
+
+
 
 function SectionLabel({ title, children }: { kicker?: string; title: string; children?: React.ReactNode }) {
   return (
