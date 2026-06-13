@@ -43,15 +43,6 @@ export function Sparkle({ className = "" }: { className?: string }) {
   );
 }
 
-export function Squiggle({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 200 20" className={className} aria-hidden fill="none">
-      <path d="M2 10 C 20 0, 40 20, 60 10 S 100 0, 120 10 S 160 20, 198 10"
-        stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
-}
-
 export function ArrowHand({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 120 80" className={className} aria-hidden fill="none">
