@@ -82,7 +82,7 @@ export function Pricing() {
             <article
               key={p.name.ru}
               className={`relative flex flex-col rounded-3xl border p-7 shadow-soft transition sm:p-8
-                ${isReco ? "border-primary bg-gradient-to-b from-primary-soft/70 to-surface shadow-glow" : "border-border bg-surface"}`}
+                ${isReco ? "border-primary bg-surface shadow-glow" : "border-border bg-surface"}`}
             >
               {isReco && (
                 <span className="absolute -top-3 left-7 rounded-full bg-gradient-primary px-3 py-1 text-xs font-bold text-primary-foreground shadow-soft sm:left-8">

@@ -19,9 +19,9 @@ export function Hero() {
         <BlobB className="absolute -left-32 bottom-0 h-[22rem] w-[22rem] opacity-50 blur-3xl sm:-left-20" />
       </div>
 
-      <div className="fade-up relative mx-auto max-w-3xl px-5 pb-8 pt-14 text-center sm:px-8 sm:pb-10 lg:pb-12 lg:pt-24">
+      <div className="fade-up relative mx-auto max-w-3xl px-5 pb-8 pt-16 text-center sm:px-8 sm:pb-10 sm:pt-24 lg:pb-16 lg:pt-36">
         <Sparkle className="absolute right-4 top-4 hidden h-6 w-6 rotate-12 text-primary/40 sm:right-10 sm:block" />
-        <h1 className="font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-6xl">
+        <h1 className="font-display text-5xl font-extrabold leading-[1.02] tracking-tight text-ink sm:text-6xl lg:text-7xl">
           {t.h1a}
           <br />
           {t.h1b}{" "}
@@ -30,7 +30,7 @@ export function Hero() {
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-pretty text-lg text-muted-foreground">{t.sub}</p>
 
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:mt-10">
           <a
             href="#contacts"
             className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-1px]"
@@ -46,7 +46,7 @@ export function Hero() {
           </a>
         </div>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-x-2.5 gap-y-2">
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-x-2.5 gap-y-2 lg:mt-12">
           <span className="text-sm font-semibold text-muted-foreground">{t.worksIn}:</span>
           {CHANNELS.map((c) => (
             <span
@@ -60,7 +60,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="relative mx-auto max-w-xl px-5 pb-20 pt-6 sm:px-8 sm:pt-10 lg:pt-12">
+      <div className="relative mx-auto max-w-xl px-5 pb-20 pt-10 sm:px-8 sm:pt-16 lg:pt-28">
         <Sparkle className="absolute -left-2 top-8 hidden h-7 w-7 -rotate-12 text-mint/60 sm:-left-8 sm:block" />
         <HeroChat />
       </div>

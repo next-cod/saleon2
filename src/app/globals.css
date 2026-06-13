@@ -94,9 +94,9 @@
   /* Gradients & shadows */
   --gradient-primary: linear-gradient(135deg, oklch(0.56 0.22 264) 0%, oklch(0.66 0.2 254) 100%);
   --gradient-soft: radial-gradient(1200px 600px at 50% -10%, oklch(0.92 0.06 264 / 0.55), transparent 60%);
-  --gradient-mesh: radial-gradient(600px 400px at 10% 10%, oklch(0.92 0.06 264 / 0.6), transparent 60%),
-                   radial-gradient(500px 400px at 90% 20%, oklch(0.92 0.08 300 / 0.45), transparent 60%),
-                   radial-gradient(700px 500px at 50% 100%, oklch(0.94 0.05 200 / 0.5), transparent 60%);
+  --gradient-mesh: radial-gradient(900px 600px at 12% 8%, oklch(0.9 0.07 264 / 0.85), transparent 65%),
+                   radial-gradient(800px 600px at 92% 18%, oklch(0.9 0.09 300 / 0.7), transparent 65%),
+                   radial-gradient(1000px 700px at 50% 105%, oklch(0.92 0.07 200 / 0.75), transparent 65%);
 
   --shadow-sm: 0 1px 2px oklch(0.2 0.05 260 / 0.06);
   --shadow-md: 0 6px 24px -8px oklch(0.2 0.05 260 / 0.12), 0 2px 6px oklch(0.2 0.05 260 / 0.05);
@@ -137,7 +137,11 @@
     background-image: radial-gradient(oklch(0.7 0.04 260 / 0.35) 1px, transparent 1px);
     background-size: 18px 18px;
   }
-  .bg-mesh { background-image: var(--gradient-mesh); }
+  .bg-mesh {
+    background-image: var(--gradient-mesh);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
   .bg-gradient-primary { background-image: var(--gradient-primary); }
 
   .shadow-soft { box-shadow: var(--shadow-md); }

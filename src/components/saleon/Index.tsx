@@ -14,7 +14,7 @@ import { BlobA, BlobB } from "./Decor";
 
 export function Index() {
   return (
-    <div id="top" className="relative isolate min-h-screen overflow-x-clip bg-background text-foreground">
+    <div id="top" className="relative isolate min-h-screen overflow-x-clip bg-background bg-mesh text-foreground">
       <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
         <BlobA className="absolute -right-56 top-[-6rem] h-[42rem] w-[42rem] opacity-30 blur-3xl" />
         <BlobB className="absolute -left-56 bottom-[-6rem] h-[38rem] w-[38rem] opacity-30 blur-3xl" />
