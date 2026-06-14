@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Inter, Manrope } from "next/font/google";
 import { LocaleProvider } from "@/lib/i18n/LocaleProvider";
+import { ChatWidgetTheme } from "@/components/saleon/ChatWidgetTheme";
 import "./globals.css";
 
 const inter = Inter({
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ru">
       <body className={`${inter.variable} ${manrope.variable} font-sans antialiased`}>
         <LocaleProvider>{children}</LocaleProvider>
+        <ChatWidgetTheme />
         <Script
           src="https://widget.saleonbot.ru/widget.js"
           data-api-key="7cfda9a9-6ac9-454a-b68f-b414065c2032"
