@@ -28,7 +28,7 @@ export const HERO_CHATS: HeroChat[] = [
       { ru: "Другое время", en: "Different time" },
     ],
     chipReplies: [
-      { ru: "Час аренды — 2500 руб. Если нужна команда для съёмки, добавим 1000 руб. Для постоянных клиентов скидка 15%.", en: "One hour rental — $30. If you need a crew, add $12. Regular clients get 15% off." },
+      { ru: "Час аренды – 2500 руб. Если нужна команда для съёмки, добавим 1000 руб. Для постоянных клиентов скидка 15%.", en: "One hour rental – $30. If you need a crew, add $12. Regular clients get 15% off." },
       { ru: "Конечно! Все фото есть в нашем Telegram-канале @sam_studio. Там же актуальное расписание.", en: "Of course! All photos are in our Telegram channel @sam_studio. Schedule is there too." },
       { ru: "Есть слоты: сегодня 19:00, послезавтра 10:00 и 15:00. Какой подходит?", en: "Available: today at 7 PM, day after tomorrow at 10 AM and 3 PM. Which works?" },
     ],
@@ -49,7 +49,7 @@ export const HERO_CHATS: HeroChat[] = [
     chipReplies: [
       { ru: "Отлично! Записал тебя завтра в 18:00. Пришлю напоминание за 2 часа. Увидимся на корте!", en: "Awesome! Booked you for tomorrow at 6 PM. I'll send a reminder 2 hours before. See you on the court!" },
       { ru: "Есть слоты: в эту субботу в 10:00, воскресенье в 12:00 и 16:00. Что подходит?", en: "Available: this Saturday at 10 AM, Sunday at 12 PM and 4 PM. Which works?" },
-      { ru: "Пробный час — 800 руб с ракеткой. Абонемент 8 часов — 5200 руб. Групповые тренировки — 600 руб/чел.", en: "Trial hour — $10 with racket. 8-hour membership — $65. Group training — $8/person." },
+      { ru: "Пробный час – 800 руб с ракеткой. Абонемент 8 часов – 5200 руб. Групповые тренировки – 600 руб/чел.", en: "Trial hour – $10 with racket. 8-hour membership – $65. Group training – $8/person." },
     ],
   },
   // ГЛАША / FLORA
@@ -67,8 +67,8 @@ export const HERO_CHATS: HeroChat[] = [
     ],
     chipReplies: [
       { ru: "Отлично! В этом бюджете сделаю нежный букет из тюльпанов и альстромерий в пастельных тонах. Будет очень атмосферно! Самовывоз или доставка?", en: "Perfect! In this budget I'll make a delicate bouquet of tulips and alstroemeria in pastel tones. Very atmospheric! Pickup or delivery?" },
-      { ru: "Прекрасно! На 3500 соберу роскошный букет из пионов и эустомы с эвкалиптом — именно то, что описывала. Когда нужен?", en: "Wonderful! For $45 I'll create a luxurious peony and lisianthus bouquet with eucalyptus — exactly what you described. When do you need it?" },
-      { ru: "Доставляем по городу — 300 руб. Курьер привезёт в указанное время с открыткой. Адрес и время доставки?", en: "We deliver citywide — $4. Courier arrives at your specified time with a card included. Address and delivery time?" },
+      { ru: "Прекрасно! На 3500 соберу роскошный букет из пионов и эустомы с эвкалиптом – именно то, что описывала. Когда нужен?", en: "Wonderful! For $45 I'll create a luxurious peony and lisianthus bouquet with eucalyptus – exactly what you described. When do you need it?" },
+      { ru: "Доставляем по городу – 300 руб. Курьер привезёт в указанное время с открыткой. Адрес и время доставки?", en: "We deliver citywide – $4. Courier arrives at your specified time with a card included. Address and delivery time?" },
     ],
   },
   // КИРИЛЛЫЧ / CARL
@@ -87,7 +87,7 @@ export const HERO_CHATS: HeroChat[] = [
     chipReplies: [
       { ru: "Добро! Ждём тебя в субботу в 9:00. Адрес: ул. Механиков, 14. Позвони, если вдруг не найдёшь.", en: "Perfect! See you Saturday at 9 AM. Address: 14 Mechanics St. Call if you can't find us." },
       { ru: "Без проблем. В воскресенье есть 10:00 и 12:00, в понедельник с 8:00. Что удобнее?", en: "No problem. Sunday has 10 AM and 12 PM, Monday from 8 AM. What works best?" },
-      { ru: "Если колодки — от 1800 руб с работой. Суппорт — от 3500 руб. Точнее скажу после диагностики, она бесплатная.", en: "Brake pads — from $22 including labor. Caliper — from $45. I'll give exact price after the free diagnosis." },
+      { ru: "Если колодки – от 1800 руб с работой. Суппорт – от 3500 руб. Точнее скажу после диагностики, она бесплатная.", en: "Brake pads – from $22 including labor. Caliper – from $45. I'll give exact price after the free diagnosis." },
     ],
   },
   // ЛЮСЯ / LUCY
@@ -105,7 +105,7 @@ export const HERO_CHATS: HeroChat[] = [
     ],
     chipReplies: [
       { ru: "Конечно! Есть завтра в 11:00 и послезавтра в 10:00 и 15:00. Насте или к другому мастеру?", en: "Of course! Available tomorrow at 11 AM and the day after at 10 AM and 3 PM. With Nastya or another stylist?" },
-      { ru: "Стрижка — от 1200 руб, окрашивание — от 2500, уход — от 800. Полный прайс пришлю в Telegram. Что интересует?", en: "Haircut — from $15, coloring — from $30, treatment — from $10. Full price list in Telegram. What are you interested in?" },
+      { ru: "Стрижка – от 1200 руб, окрашивание – от 2500, уход – от 800. Полный прайс пришлю в Telegram. Что интересует?", en: "Haircut – from $15, coloring – from $30, treatment – from $10. Full price list in Telegram. What are you interested in?" },
       { ru: "Мы на ул. Садовая, 23, вход со двора. Парковка бесплатная. Работаем с 9:00 до 21:00 без выходных.", en: "We're at 23 Garden St, enter from the courtyard. Free parking. Open 9 AM – 9 PM every day." },
     ],
   },
@@ -125,7 +125,7 @@ export const HERO_CHATS: HeroChat[] = [
     chipReplies: [
       { ru: "Записал! Ждём вас сегодня в 15:00. Врач осмотрит кота и назначит лечение. Как зовут питомца?", en: "Booked! See you today at 3:00 PM. The vet will examine your cat and prescribe treatment. What's your pet's name?" },
       { ru: "Отлично! Записал на 18:30. Захватите предыдущие анализы, если есть. Как зовут кота?", en: "Great! Booked for 6:30 PM. Bring any previous test results if you have them. What's the cat's name?" },
-      { ru: "Выезжаем в пределах города, стоимость — 800 руб + стоимость осмотра. Когда удобно — сегодня или завтра? Адрес?", en: "We do home visits within the city — $10 + exam fee. When's convenient — today or tomorrow? Address?" },
+      { ru: "Выезжаем в пределах города, стоимость – 800 руб + стоимость осмотра. Когда удобно – сегодня или завтра? Адрес?", en: "We do home visits within the city – $10 + exam fee. When's convenient – today or tomorrow? Address?" },
     ],
   },
   // МАКС / MAX
@@ -142,9 +142,9 @@ export const HERO_CHATS: HeroChat[] = [
       { ru: "Купить абонемент сразу", en: "Buy membership now" },
     ],
     chipReplies: [
-      { ru: "Отлично! Завтра в 8:00 тебя ждём. Форма и полотенце — в прокате. Имя для записи?", en: "Perfect! Tomorrow at 8:00 AM. Gear and towels are available for rent. Name for the booking?" },
-      { ru: "Записал на завтра в 19:00. Приходи бодрым — первое занятие бесплатно!", en: "Booked for tomorrow at 7:00 PM. Come energized — first session is free!" },
-      { ru: "Уважаю решительность! Месячный — 2900 руб, три месяца — 6900. Как удобно оплатить: картой онлайн или на месте?", en: "Love the decisiveness! Monthly — $35, three months — $85. Pay online by card or in person?" },
+      { ru: "Отлично! Завтра в 8:00 тебя ждём. Форма и полотенце – в прокате. Имя для записи?", en: "Perfect! Tomorrow at 8:00 AM. Gear and towels are available for rent. Name for the booking?" },
+      { ru: "Записал на завтра в 19:00. Приходи бодрым – первое занятие бесплатно!", en: "Booked for tomorrow at 7:00 PM. Come energized – first session is free!" },
+      { ru: "Уважаю решительность! Месячный – 2900 руб, три месяца – 6900. Как удобно оплатить: картой онлайн или на месте?", en: "Love the decisiveness! Monthly – $35, three months – $85. Pay online by card or in person?" },
     ],
   },
 ];

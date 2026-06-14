@@ -27,10 +27,10 @@ export function Problems() {
         ))}
       </div>
 
-      <div className="mt-12 rounded-3xl border border-primary/20 bg-primary-soft p-8 text-center">
-        <p className="mx-auto max-w-3xl text-pretty text-lg text-ink">
-          <span className="font-display font-extrabold text-primary">Сэйлон</span> создаёт цифровых сотрудников с характером.
-          Они понимают, на каком этапе находится клиент — и отвечают точно под момент.
+      <div className="mt-12 rounded-3xl bg-gradient-primary p-8 text-center shadow-glow sm:p-10">
+        <p className="mx-auto max-w-3xl text-pretty text-xl text-primary-foreground">
+          <span className="font-display font-extrabold">Сэйлон</span> создаёт цифровых сотрудников с характером.
+          Они понимают, на каком этапе находится клиент – и отвечают точно под момент.
         </p>
       </div>
     </section>

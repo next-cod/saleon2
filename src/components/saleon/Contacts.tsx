@@ -1,6 +1,6 @@
 "use client";
 
-import { Field, ARROW_ICON } from "./shared";
+import { Field, Select, ARROW_ICON } from "./shared";
 import { useLocale, pick } from "@/lib/i18n/LocaleProvider";
 import { CONTACT_NICHES, CONTACT_STATS, UI } from "@/lib/i18n/content";
 
@@ -20,7 +20,7 @@ export function Contacts() {
               {CONTACT_STATS.map((s, i) => (
                 <div key={i} className="rounded-2xl border border-border bg-background p-4 text-center">
                   <div className="font-display text-3xl font-extrabold text-gradient">{s.v}</div>
-                  <div className="mt-1 text-[11px] text-muted-foreground">{pick(locale, s.l)}</div>
+                  <div className="mt-1 break-words text-[11px] text-muted-foreground">{pick(locale, s.l)}</div>
                 </div>
               ))}
             </div>
@@ -40,15 +40,11 @@ export function Contacts() {
             <div className="space-y-4">
               <Field label={t.nameLabel} placeholder={t.namePlaceholder} />
               <Field label={t.contactLabel} placeholder={t.contactPlaceholder} />
-              <div>
-                <label className="mb-1.5 block text-xs font-semibold text-muted-foreground">{t.nicheLabel}</label>
-                <select className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-ink outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20">
-                  <option>{t.nicheSelect}</option>
-                  {CONTACT_NICHES.map((n, i) => (
-                    <option key={i}>{pick(locale, n)}</option>
-                  ))}
-                </select>
-              </div>
+              <Select
+                label={t.nicheLabel}
+                placeholder={t.nicheSelect}
+                options={CONTACT_NICHES.map((n) => pick(locale, n))}
+              />
             </div>
             <button className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-1px]">
               {t.submit}

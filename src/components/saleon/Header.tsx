@@ -25,7 +25,7 @@ export function Header() {
             </a>
           ))}
         </nav>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 sm:gap-2">
           <div className="hidden items-center rounded-full border border-border bg-surface p-1 text-xs font-semibold sm:flex">
             <button
               onClick={() => setLocale("ru")}
@@ -46,10 +46,10 @@ export function Header() {
           </div>
           <a
             href="#contacts"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-1px]"
+            className="inline-flex items-center gap-1.5 rounded-full bg-gradient-primary px-3.5 py-2 text-xs font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-1px] sm:gap-2 sm:px-5 sm:py-2.5 sm:text-sm"
           >
             {t.header.tryIt}
-            {ARROW_ICON}
+            <span className="hidden sm:inline">{ARROW_ICON}</span>
           </a>
           <button
             onClick={() => setOpen(!open)}

@@ -5,18 +5,6 @@ import { SectionLabel, Eyebrow } from "./shared";
 import { useLocale, pick } from "@/lib/i18n/LocaleProvider";
 import { PLANS, PRICING_FEATURES, UI } from "@/lib/i18n/content";
 
-const INQUIRY_ICON = (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-    <path
-      d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
-
 export function Pricing() {
   const { locale } = useLocale();
   const t = UI[locale].pricing;
@@ -39,15 +27,10 @@ export function Pricing() {
 
       <div className="mt-10 rounded-3xl border border-border bg-surface p-6 shadow-soft sm:p-8">
         <div className="flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-center gap-4">
-            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary-soft text-primary sm:h-14 sm:w-14">
-              {INQUIRY_ICON}
-            </span>
-            <div>
-              <div className="text-xs font-semibold text-muted-foreground">{t.howMany}</div>
-              <div className="mt-1 font-display text-3xl font-extrabold text-ink">
-                {vol} <span className="text-base font-medium text-muted-foreground">{t.perDay}</span>
-              </div>
+          <div>
+            <div className="text-xs font-semibold text-muted-foreground">{t.howMany}</div>
+            <div className="mt-1 font-display text-3xl font-extrabold text-ink">
+              {vol} <span className="text-base font-medium text-muted-foreground">{t.perDay}</span>
             </div>
           </div>
           <div className="rounded-2xl bg-primary-soft px-4 py-3 text-sm">
@@ -89,7 +72,7 @@ export function Pricing() {
                   {t.featuredBadge}
                 </span>
               )}
-              <div className="font-display text-xl font-extrabold text-ink">{pick(locale, p.name)}</div>
+              <div className="break-words font-display text-xl font-extrabold text-ink">{pick(locale, p.name)}</div>
               <div className="mt-2 text-sm text-muted-foreground">{pick(locale, p.lim)}</div>
               <div className="mt-6 flex items-baseline gap-1">
                 {p.price === null ? (

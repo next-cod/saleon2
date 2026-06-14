@@ -196,6 +196,74 @@ export function Field({ label, placeholder }: { label: string; placeholder: stri
   );
 }
 
+/* ---------- custom select dropdown ---------- */
+
+export function Select({
+  label,
+  placeholder,
+  options,
+}: {
+  label: string;
+  placeholder: string;
+  options: string[];
+}) {
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState<string | null>(null);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onClick = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener("mousedown", onClick);
+    return () => document.removeEventListener("mousedown", onClick);
+  }, [open]);
+
+  return (
+    <div ref={ref} className="relative">
+      <label className="mb-1.5 block text-xs font-semibold text-muted-foreground">{label}</label>
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        className={`flex w-full items-center justify-between gap-2 rounded-xl border bg-background px-4 py-3 text-left text-sm outline-none transition
+          ${open ? "border-primary ring-2 ring-primary/20" : "border-input"}`}
+      >
+        <span className={value ? "text-ink" : "text-muted-foreground"}>{value ?? placeholder}</span>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          className={`shrink-0 text-muted-foreground transition-transform ${open ? "rotate-180" : ""}`}
+        >
+          <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
+      {open && (
+        <div className="dropdown-in absolute z-20 mt-2 w-full origin-top overflow-hidden rounded-2xl border border-border bg-surface p-1.5 shadow-elev">
+          <div className="max-h-60 overflow-y-auto">
+            {options.map((opt) => (
+              <button
+                key={opt}
+                type="button"
+                onClick={() => {
+                  setValue(opt);
+                  setOpen(false);
+                }}
+                className={`block w-full rounded-xl px-3.5 py-2.5 text-left text-sm transition
+                  ${opt === value ? "bg-primary-soft font-semibold text-primary" : "text-ink hover:bg-background"}`}
+              >
+                {opt}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 /* ---------- footer column ---------- */
 
 export function FooterCol({ title, links }: { title: string; links: string[] }) {

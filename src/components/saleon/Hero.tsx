@@ -21,9 +21,7 @@ export function Hero() {
 
       <div className="fade-up relative mx-auto max-w-3xl px-5 pb-8 pt-16 text-center sm:px-8 sm:pb-10 sm:pt-24 lg:pb-16 lg:pt-36">
         <Sparkle className="absolute right-4 top-4 hidden h-6 w-6 rotate-12 text-primary/40 sm:right-10 sm:block" />
-        <h1 className="font-display text-5xl font-extrabold leading-[1.02] tracking-tight text-ink sm:text-6xl lg:text-7xl">
-          {t.h1a}
-          <br />
+        <h1 className="font-display text-5xl font-extrabold leading-[1.02] tracking-tight text-ink min-[375px]:text-6xl sm:text-7xl lg:text-8xl">
           {t.h1b}{" "}
           <span className="text-gradient">{t.h1highlight}</span>
           .

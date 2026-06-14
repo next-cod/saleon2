@@ -56,7 +56,7 @@
   --primary-soft: oklch(0.95 0.04 264);
   --primary-glow: oklch(0.72 0.18 254);
 
-  /* Neutrals — warm cool off-white */
+  /* Neutrals – warm cool off-white */
   --background: oklch(0.985 0.005 250);
   --surface: oklch(1 0 0);
   --surface-elevated: oklch(0.995 0.003 250);
@@ -183,5 +183,11 @@
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(16px); }
     to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .dropdown-in { animation: dropdownIn 0.15s ease-out both; }
+  @keyframes dropdownIn {
+    from { opacity: 0; transform: translateY(-6px) scale(0.98); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
   }
 }
