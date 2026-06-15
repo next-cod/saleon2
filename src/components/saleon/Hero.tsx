@@ -43,7 +43,7 @@ export function Hero() {
             </div>
             <ArrowDoodleDownLeft
               className={`pointer-events-none absolute left-0 top-1/2 z-10 hidden h-12 w-16 -translate-y-[140%] -scale-x-100 text-primary xl:block xl:h-14 xl:w-20 ${
-                locale === "en" ? "-translate-x-[88px]" : "-translate-x-3"
+                locale === "en" ? "-translate-x-[104px]" : "-translate-x-3"
               }`}
             />
             <a
