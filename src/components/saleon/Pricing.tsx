@@ -75,7 +75,7 @@ export function Pricing() {
                   </span>
                   <div className="pointer-events-none absolute -bottom-16 right-4 z-10 hidden -rotate-3 text-primary sm:-bottom-20 sm:right-6 sm:block">
                     <ArrowDoodleUp className="h-8 w-14 sm:h-10 sm:w-16" />
-                    <p className="-mt-1 font-hand text-lg sm:text-xl">{pick(locale, DOODLES[2])}</p>
+                    <p className="-mt-1 font-hand text-xl sm:text-2xl">{pick(locale, DOODLES[2])}</p>
                   </div>
                 </>
               )}
