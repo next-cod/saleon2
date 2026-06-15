@@ -29,14 +29,14 @@ export function Hero() {
         <p className="mx-auto mt-6 max-w-xl text-pretty text-lg text-muted-foreground">{t.sub}</p>
 
         <div className="relative mt-8 flex flex-wrap items-center justify-center gap-3 lg:mt-10">
-          <div className="pointer-events-none absolute right-full top-1/2 z-10 hidden w-max -translate-y-[85%] -rotate-2 pr-4 text-right text-primary xl:block">
-            <p className="font-hand text-xl leading-tight xl:text-2xl 2xl:text-3xl">
+          <div className="pointer-events-none absolute right-full top-1/2 z-10 hidden w-max -translate-y-[80%] -rotate-2 pr-2 text-right text-primary xl:block">
+            <p className="font-hand text-base leading-[1.05] xl:text-lg 2xl:text-xl">
               {heroDoodleLines[0]}
               <br />
               {heroDoodleLines[1]}
             </p>
           </div>
-          <ArrowDoodleDownLeft className="pointer-events-none absolute left-0 top-1/2 z-10 hidden h-10 w-16 -translate-y-[60%] -scale-x-100 text-primary xl:block xl:h-12 xl:w-20" />
+          <ArrowDoodleDownLeft className="pointer-events-none absolute left-0 top-1/2 z-10 hidden h-10 w-16 -translate-y-1/2 -rotate-6 -scale-x-100 text-primary xl:block xl:h-12 xl:w-20" />
           <a
             href="#hero-chat"
             className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-1px]"
