@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Bubble, TypingBubble, ChipRow, ChannelIcon, useChipChat, useChatScroll, ARROW_ICON } from "./shared";
-import { BlobA, BlobB, Sparkle, ArrowDoodleDownLeft } from "./Decor";
+import { BlobA, BlobB, Sparkle, ArrowHand } from "./Decor";
 import { useLocale, pick } from "@/lib/i18n/LocaleProvider";
 import { CHANNELS, DOODLES, UI } from "@/lib/i18n/content";
 import { BOTS } from "@/lib/i18n/personas";
@@ -36,7 +36,7 @@ export function Hero() {
               {heroDoodleLines[1]}
             </p>
           </div>
-          <ArrowDoodleDownLeft className="pointer-events-none absolute left-0 top-1/2 z-10 hidden h-10 w-16 -translate-y-1/2 -rotate-6 -scale-x-100 text-primary xl:block xl:h-12 xl:w-20" />
+          <ArrowHand className="pointer-events-none absolute left-0 top-1/2 z-10 hidden h-12 w-12 -translate-y-[55%] -rotate-3 -scale-x-100 text-primary xl:block xl:h-14 xl:w-14" />
           <a
             href="#hero-chat"
             className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-1px]"
