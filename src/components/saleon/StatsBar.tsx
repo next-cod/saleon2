@@ -1,14 +1,19 @@
 "use client";
 
 import { useLocale, pick } from "@/lib/i18n/LocaleProvider";
-import { STATS } from "@/lib/i18n/content";
+import { DOODLES, STATS } from "@/lib/i18n/content";
+import { ArrowDoodleDownLeft } from "./Decor";
 
 const WIDTHS = [40, 70, 100, 80];
 
 export function StatsBar() {
   const { locale } = useLocale();
   return (
-    <section className="mx-auto max-w-7xl px-5 pb-20 sm:px-8">
+    <section className="relative mx-auto max-w-7xl px-5 pb-20 sm:px-8">
+      <div className="pointer-events-none absolute -top-10 right-[6%] z-10 hidden rotate-2 text-primary sm:-top-12 sm:right-[18%] sm:block">
+        <p className="font-hand text-xl sm:text-2xl">{pick(locale, DOODLES[1])}</p>
+        <ArrowDoodleDownLeft className="ml-10 h-12 w-20 sm:h-14 sm:w-24" />
+      </div>
       <div className="grid gap-3 rounded-3xl border border-border bg-surface p-3 shadow-soft sm:grid-cols-2 lg:grid-cols-4">
         {STATS.map((s, i) => (
           <div key={i} className="relative overflow-hidden rounded-2xl bg-background p-5">

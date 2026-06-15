@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Inter, Manrope } from "next/font/google";
+import { Inter, Manrope, Caveat } from "next/font/google";
 import { LocaleProvider } from "@/lib/i18n/LocaleProvider";
 import { ChatWidgetTheme } from "@/components/saleon/ChatWidgetTheme";
 import "./globals.css";
@@ -13,6 +13,12 @@ const inter = Inter({
 const manrope = Manrope({
   subsets: ["latin", "cyrillic"],
   variable: "--font-manrope",
+});
+
+const caveat = Caveat({
+  subsets: ["latin", "cyrillic"],
+  variable: "--font-caveat",
+  weight: ["600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -28,7 +34,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ru">
-      <body className={`${inter.variable} ${manrope.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${manrope.variable} ${caveat.variable} font-sans antialiased`}>
         <LocaleProvider>{children}</LocaleProvider>
         <ChatWidgetTheme />
         <Script

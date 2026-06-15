@@ -2,15 +2,20 @@
 
 import { SectionLabel } from "./shared";
 import { useLocale, pick } from "@/lib/i18n/LocaleProvider";
-import { TEAM, UI } from "@/lib/i18n/content";
+import { DOODLES, TEAM, UI } from "@/lib/i18n/content";
+import { ArrowDoodleLoop } from "./Decor";
 
 export function Team() {
   const { locale } = useLocale();
   const t = UI[locale].team;
 
   return (
-    <section id="team" className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
+    <section id="team" className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8">
       <SectionLabel title={t.title} />
+      <div className="pointer-events-none absolute right-2 top-2 z-10 hidden rotate-3 text-primary sm:right-10 sm:top-6 sm:block">
+        <p className="font-hand text-xl sm:text-2xl">{pick(locale, DOODLES[3])}</p>
+        <ArrowDoodleLoop className="ml-6 h-14 w-20 sm:h-16 sm:w-24" />
+      </div>
       <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {TEAM.map((m) => (
           <article
@@ -25,6 +30,9 @@ export function Team() {
                 <h4 className="font-display text-base font-extrabold text-white">{m.name}</h4>
                 <p className="mt-2 text-xs leading-relaxed text-white/80">{pick(locale, m.bio)}</p>
               </div>
+              <span className="absolute right-3 top-3 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-mint ring-2 ring-white/80">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-mint opacity-75" />
+              </span>
             </div>
             <h3 className="mt-4 px-2 font-display text-xl font-extrabold text-ink">{m.name}</h3>
             <p className="mt-1 px-2 pb-3 text-sm text-primary">{pick(locale, m.role)}</p>

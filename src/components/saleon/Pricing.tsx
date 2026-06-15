@@ -3,7 +3,8 @@
 import { useMemo, useState } from "react";
 import { SectionLabel, Eyebrow } from "./shared";
 import { useLocale, pick } from "@/lib/i18n/LocaleProvider";
-import { PLANS, PRICING_FEATURES, UI } from "@/lib/i18n/content";
+import { DOODLES, PLANS, PRICING_FEATURES, UI } from "@/lib/i18n/content";
+import { ArrowDoodleUp } from "./Decor";
 
 export function Pricing() {
   const { locale } = useLocale();
@@ -58,7 +59,11 @@ export function Pricing() {
         </div>
       </div>
 
-      <div className="mt-8 grid gap-5 lg:grid-cols-4 lg:gap-6">
+      <div className="relative mt-8 grid gap-5 lg:grid-cols-4 lg:gap-6">
+        <div className="pointer-events-none absolute -bottom-4 right-4 z-10 hidden -rotate-3 text-primary sm:right-10 sm:block lg:right-[14%]">
+          <ArrowDoodleUp className="h-8 w-14 sm:h-10 sm:w-16" />
+          <p className="-mt-1 font-hand text-lg sm:text-xl">{pick(locale, DOODLES[2])}</p>
+        </div>
         {PLANS.map((p) => {
           const isReco = p.name === recommended.name;
           return (
@@ -108,7 +113,7 @@ export function Pricing() {
         })}
       </div>
 
-      <div className="mt-6 grid gap-5 lg:grid-cols-2">
+      <div className="mt-12 grid gap-5 lg:grid-cols-2">
         <div className="rounded-3xl border border-border bg-surface p-7 shadow-soft">
           <Eyebrow>{t.selfTitle}</Eyebrow>
           <h4 className="mt-2 font-display text-xl font-bold text-ink">{t.selfHeading}</h4>

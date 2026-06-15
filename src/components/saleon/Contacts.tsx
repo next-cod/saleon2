@@ -2,7 +2,7 @@
 
 import { Field, Select, ARROW_ICON } from "./shared";
 import { useLocale, pick } from "@/lib/i18n/LocaleProvider";
-import { CONTACT_NICHES, CONTACT_STATS, UI } from "@/lib/i18n/content";
+import { CONTACT_NICHES, CONTACT_PS, CONTACT_STATS, UI } from "@/lib/i18n/content";
 
 export function Contacts() {
   const { locale } = useLocale();
@@ -34,6 +34,9 @@ export function Contacts() {
                 <div className="text-xs text-muted-foreground">{t.authorRole}</div>
               </div>
             </div>
+            <p className="mt-4 -rotate-1 pl-1 font-hand text-lg text-primary sm:text-xl">
+              P.S. {pick(locale, CONTACT_PS.text)} <span className="whitespace-nowrap">— {CONTACT_PS.sign}</span>
+            </p>
           </div>
 
           <form onSubmit={(e) => e.preventDefault()} className="relative rounded-3xl border border-border bg-surface p-6 shadow-soft sm:p-8">

@@ -53,3 +53,36 @@ export function ArrowHand({ className = "" }: { className?: string }) {
     </svg>
   );
 }
+
+export function ArrowDoodleDownLeft({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 120 80" className={className} aria-hidden fill="none">
+      <path d="M112 8 C 95 15, 35 25, 22 60" stroke="currentColor" strokeWidth="2"
+        strokeLinecap="round" strokeDasharray="1 5" />
+      <path d="M34 50 L 20 64 L 12 44" stroke="currentColor" strokeWidth="2"
+        strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function ArrowDoodleUp({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 120 80" className={className} aria-hidden fill="none">
+      <path d="M10 72 C 25 40, 70 25, 108 10" stroke="currentColor" strokeWidth="2"
+        strokeLinecap="round" strokeDasharray="1 5" />
+      <path d="M82 8 L 110 9 L 98 32" stroke="currentColor" strokeWidth="2"
+        strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function ArrowDoodleLoop({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 120 100" className={className} aria-hidden fill="none">
+      <path d="M8 18 C 45 2, 88 14, 70 42 C 56 64, 88 66, 96 92" stroke="currentColor" strokeWidth="2"
+        strokeLinecap="round" strokeDasharray="1 5" />
+      <path d="M80 80 L 98 94 L 104 72" stroke="currentColor" strokeWidth="2"
+        strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
