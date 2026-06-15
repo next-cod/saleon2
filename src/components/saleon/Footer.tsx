@@ -14,6 +14,7 @@ export function Footer() {
         <div>
           <Logo variant="dark" />
           <p className="mt-4 max-w-sm text-sm text-white/55">{t.desc}</p>
+          <p className="mt-3 -rotate-1 font-hand text-lg text-white/60">{t.signature}</p>
         </div>
         {FOOTER_COLS.map((col, i) => (
           <FooterCol key={i} title={pick(locale, col.title)} links={col.links.map((l) => pick(locale, l))} />

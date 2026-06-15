@@ -2,7 +2,8 @@
 
 import { SectionLabel } from "./shared";
 import { useLocale, pick } from "@/lib/i18n/LocaleProvider";
-import { HOW, UI } from "@/lib/i18n/content";
+import { DOODLES, HOW, UI } from "@/lib/i18n/content";
+import { ArrowDoodleDownLeft } from "./Decor";
 
 export function How() {
   const { locale } = useLocale();
@@ -12,6 +13,10 @@ export function How() {
     <section id="how" className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8">
       <SectionLabel title={t.title} />
       <div className="relative mt-14 grid gap-6 lg:grid-cols-3">
+        <div className="pointer-events-none absolute -top-8 right-2 z-10 hidden -rotate-2 text-primary lg:right-6 lg:block">
+          <p className="font-hand text-xl xl:text-2xl">{pick(locale, DOODLES[4])}</p>
+          <ArrowDoodleDownLeft className="ml-10 h-10 w-16 xl:h-12 xl:w-20" />
+        </div>
         <div aria-hidden className="absolute left-0 right-0 top-12 hidden h-px lg:block">
           <div className="mx-auto h-px w-[78%] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
         </div>

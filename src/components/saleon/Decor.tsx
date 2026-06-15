@@ -76,6 +76,31 @@ export function ArrowDoodleUp({ className = "" }: { className?: string }) {
   );
 }
 
+export function MarkerHighlight({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 30" preserveAspectRatio="none" className={className} aria-hidden>
+      <path
+        d="M2 18 C 20 10, 60 26, 98 14 C 99 20, 99 24, 98 28 C 58 22, 22 28, 2 26 Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+export function CheckDoodle({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden fill="none">
+      <path
+        d="M3.5 12.5 C 5 14, 7 16.5, 9.5 18.5 C 13.5 13, 17 8.5, 20.5 4.5"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export function ArrowDoodleLoop({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 100 100" className={className} aria-hidden fill="none">

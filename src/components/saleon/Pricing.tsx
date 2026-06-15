@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { SectionLabel, Eyebrow } from "./shared";
 import { useLocale, pick } from "@/lib/i18n/LocaleProvider";
 import { DOODLES, PLANS, PRICING_FEATURES, UI } from "@/lib/i18n/content";
-import { ArrowDoodleUp } from "./Decor";
+import { ArrowDoodleUp, CheckDoodle, MarkerHighlight } from "./Decor";
 
 export function Pricing() {
   const { locale } = useLocale();
@@ -70,7 +70,7 @@ export function Pricing() {
             >
               {isReco && (
                 <>
-                  <span className="absolute -top-3 left-7 rounded-full bg-gradient-primary px-3 py-1 text-xs font-bold text-primary-foreground shadow-soft sm:left-8">
+                  <span className="absolute -top-3 left-7 -rotate-3 rounded-full bg-gradient-primary px-3 py-1 text-xs font-bold text-primary-foreground shadow-soft sm:left-8">
                     {t.featuredBadge}
                   </span>
                   <div className="pointer-events-none absolute -bottom-16 right-4 z-10 hidden -rotate-3 text-primary sm:-bottom-20 sm:right-6 sm:block">
@@ -95,9 +95,7 @@ export function Pricing() {
                 {[p.sup, ...PRICING_FEATURES].map((f, i) => (
                   <li key={i} className="flex items-start gap-2 text-foreground">
                     <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary-soft text-primary">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
-                        <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
+                      <CheckDoodle className="h-3 w-3" />
                     </span>
                     {pick(locale, f)}
                   </li>
@@ -124,7 +122,10 @@ export function Pricing() {
         <div className="relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-primary-soft/70 to-transparent p-7 shadow-soft">
           <Eyebrow tone="primary">{t.turnkeyTitle}</Eyebrow>
           <div className="mt-2 flex items-baseline gap-3">
-            <span className="font-display text-3xl font-extrabold text-ink">{t.turnkeyPrice}</span>
+            <span className="relative inline-block">
+              <MarkerHighlight className="absolute -inset-x-2 -inset-y-1 -z-10 text-mint/40" />
+              <span className="relative font-display text-3xl font-extrabold text-ink">{t.turnkeyPrice}</span>
+            </span>
             <span className="text-sm text-muted-foreground line-through">{t.turnkeyOldPrice}</span>
           </div>
           <p className="mt-2 text-sm text-foreground">{t.turnkeyDesc}</p>

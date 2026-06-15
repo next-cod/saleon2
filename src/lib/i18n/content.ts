@@ -259,6 +259,8 @@ export const DOODLES: Bi[] = [
   { ru: "серьёзно, и в 3 часа ночи тоже", en: "seriously, even at 3am" },
   { ru: "большинство выбирает этот", en: "most people pick this one" },
   { ru: "это реальная команда – фото настоящие", en: "real team – these are actual photos" },
+  { ru: "и это правда, не маркетинг", en: "and we mean it, not marketing fluff" },
+  { ru: "вопросы реальных клиентов", en: "questions real clients ask" },
 ];
 
 /* ---------- general UI strings ---------- */
@@ -340,6 +342,7 @@ export const UI = {
       desc: "Цифровые сотрудники с именем и характером. Понимают, на каком этапе клиент – и отвечают точно под момент.",
       copy: "Saleon. Все права защищены.",
       madeWith: "Сделано с ❤ для бизнеса, который ценит время",
+      signature: "— команда Saleon 👋",
     },
   },
   en: {
@@ -418,6 +421,7 @@ export const UI = {
       desc: "Digital employees with a name and personality. They understand what stage the client is at – and respond right for the moment.",
       copy: "Saleon. All rights reserved.",
       madeWith: "Made with ❤ for businesses that value their time",
+      signature: "— the Saleon team 👋",
     },
   },
 } satisfies Record<Locale, unknown>;

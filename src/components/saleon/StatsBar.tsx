@@ -2,7 +2,7 @@
 
 import { useLocale, pick } from "@/lib/i18n/LocaleProvider";
 import { DOODLES, STATS } from "@/lib/i18n/content";
-import { ArrowDoodleDownLeft } from "./Decor";
+import { ArrowDoodleDownLeft, MarkerHighlight } from "./Decor";
 
 const WIDTHS = [40, 70, 100, 80];
 
@@ -18,7 +18,16 @@ export function StatsBar() {
         {STATS.map((s, i) => (
           <div key={i} className="relative overflow-hidden rounded-2xl bg-background p-5">
             <div className="absolute right-3 top-3 text-[10px] font-bold text-muted-foreground/60">0{i + 1}</div>
-            <div className="font-display text-3xl font-extrabold text-ink">{pick(locale, s.v)}</div>
+            <div className="font-display text-3xl font-extrabold text-ink">
+              {i === 3 ? (
+                <span className="relative inline-block">
+                  <MarkerHighlight className="absolute -inset-x-2 -inset-y-1 -z-10 text-mint/40" />
+                  <span className="relative">{pick(locale, s.v)}</span>
+                </span>
+              ) : (
+                pick(locale, s.v)
+              )}
+            </div>
             <div className="mt-1 text-sm text-muted-foreground">{pick(locale, s.l)}</div>
             {i === 0 ? (
               <div className="mt-4 flex gap-1.5">
