@@ -12,7 +12,7 @@ export function How() {
   return (
     <section id="how" className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8">
       <SectionLabel title={t.title} />
-      <div className="mt-4 flex items-center justify-end gap-2 text-primary lg:hidden">
+      <div className="mt-4 hidden items-center justify-end gap-2 text-primary sm:flex lg:hidden">
         <p className="-rotate-2 font-hand text-lg sm:text-xl">{pick(locale, DOODLES[4])}</p>
         <ArrowDoodleDownLeft className="h-8 w-12 sm:h-10 sm:w-14" />
       </div>

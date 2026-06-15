@@ -74,7 +74,7 @@ export function Pricing() {
                 </span>
               )}
               {isReco && (
-                <div className="mb-2 flex items-center justify-end gap-1.5 text-primary">
+                <div className="mb-2 hidden items-center justify-end gap-1.5 text-primary sm:flex">
                   <p className="-rotate-1 font-hand text-sm sm:text-base">{pick(locale, DOODLES[2])}</p>
                   <ArrowDoodleUp className="h-5 w-8 shrink-0 -rotate-12" />
                 </div>
