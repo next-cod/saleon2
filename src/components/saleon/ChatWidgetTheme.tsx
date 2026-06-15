@@ -34,6 +34,11 @@ const OVERRIDE_CSS = `
     box-shadow: 0 2px 8px -2px rgba(15, 23, 42, .08), 0 1px 2px rgba(15, 23, 42, .04) !important;
     border: 1px solid rgba(15, 23, 42, .05) !important;
   }
+  .sw-msg-meta--user,
+  .sw-msg-meta--user .sw-msg-status,
+  .sw-msg-meta--user .sw-msg-status--read {
+    color: rgba(255, 255, 255, .75) !important;
+  }
   .sw-date-sep-text,
   .sw-msg-system span {
     font-weight: 600 !important;

@@ -60,7 +60,7 @@ export function Pricing() {
       </div>
 
       <div className="relative mt-8 grid gap-5 lg:grid-cols-4 lg:gap-6">
-        <div className="pointer-events-none absolute -bottom-4 right-4 z-10 hidden -rotate-3 text-primary sm:right-10 sm:block lg:right-[14%]">
+        <div className="pointer-events-none absolute -bottom-6 right-4 z-10 hidden -rotate-3 text-primary sm:right-10 sm:block lg:right-[49%]">
           <ArrowDoodleUp className="h-8 w-14 sm:h-10 sm:w-16" />
           <p className="-mt-1 font-hand text-lg sm:text-xl">{pick(locale, DOODLES[2])}</p>
         </div>

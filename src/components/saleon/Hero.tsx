@@ -28,7 +28,6 @@ export function Hero() {
         <h1 className="font-display text-5xl font-extrabold leading-[1.02] tracking-tight text-ink min-[375px]:text-6xl sm:text-7xl lg:text-8xl">
           {t.h1b}{" "}
           <span className="text-gradient">{t.h1highlight}</span>
-          .
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-pretty text-lg text-muted-foreground">{t.sub}</p>
 

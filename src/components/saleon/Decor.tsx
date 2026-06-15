@@ -46,9 +46,9 @@ export function Sparkle({ className = "" }: { className?: string }) {
 export function ArrowHand({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 120 80" className={className} aria-hidden fill="none">
-      <path d="M5 10 C 40 5, 70 20, 80 55" stroke="currentColor" strokeWidth="2"
-        strokeLinecap="round" strokeDasharray="1 5" />
-      <path d="M70 50 L 82 60 L 88 46" stroke="currentColor" strokeWidth="2"
+      <path d="M4 8 C 38 4, 68 18, 80 52" stroke="currentColor" strokeWidth="3"
+        strokeLinecap="round" />
+      <path d="M64 46 L 82 58 L 90 40" stroke="currentColor" strokeWidth="3"
         strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
@@ -57,9 +57,9 @@ export function ArrowHand({ className = "" }: { className?: string }) {
 export function ArrowDoodleDownLeft({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 120 80" className={className} aria-hidden fill="none">
-      <path d="M112 8 C 95 15, 35 25, 22 60" stroke="currentColor" strokeWidth="2"
-        strokeLinecap="round" strokeDasharray="1 5" />
-      <path d="M34 50 L 20 64 L 12 44" stroke="currentColor" strokeWidth="2"
+      <path d="M114 6 C 96 13, 34 26, 22 60" stroke="currentColor" strokeWidth="3"
+        strokeLinecap="round" />
+      <path d="M38 48 L 20 64 L 8 40" stroke="currentColor" strokeWidth="3"
         strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
@@ -68,9 +68,9 @@ export function ArrowDoodleDownLeft({ className = "" }: { className?: string }) 
 export function ArrowDoodleUp({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 120 80" className={className} aria-hidden fill="none">
-      <path d="M10 72 C 25 40, 70 25, 108 10" stroke="currentColor" strokeWidth="2"
-        strokeLinecap="round" strokeDasharray="1 5" />
-      <path d="M82 8 L 110 9 L 98 32" stroke="currentColor" strokeWidth="2"
+      <path d="M8 74 C 26 38, 70 24, 108 6" stroke="currentColor" strokeWidth="3"
+        strokeLinecap="round" />
+      <path d="M80 4 L 110 6 L 96 34" stroke="currentColor" strokeWidth="3"
         strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
@@ -78,10 +78,10 @@ export function ArrowDoodleUp({ className = "" }: { className?: string }) {
 
 export function ArrowDoodleLoop({ className = "" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 120 100" className={className} aria-hidden fill="none">
-      <path d="M8 18 C 45 2, 88 14, 70 42 C 56 64, 88 66, 96 92" stroke="currentColor" strokeWidth="2"
-        strokeLinecap="round" strokeDasharray="1 5" />
-      <path d="M80 80 L 98 94 L 104 72" stroke="currentColor" strokeWidth="2"
+    <svg viewBox="0 0 100 100" className={className} aria-hidden fill="none">
+      <path d="M14 8 C 70 4, 92 30, 60 52 C 36 68, 56 82, 50 94" stroke="currentColor" strokeWidth="3"
+        strokeLinecap="round" />
+      <path d="M30 84 L 50 96 L 60 76" stroke="currentColor" strokeWidth="3"
         strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
