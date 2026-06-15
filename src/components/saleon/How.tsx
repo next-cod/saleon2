@@ -12,6 +12,10 @@ export function How() {
   return (
     <section id="how" className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8">
       <SectionLabel title={t.title} />
+      <div className="mt-4 flex items-center justify-end gap-2 text-primary lg:hidden">
+        <p className="-rotate-2 font-hand text-lg sm:text-xl">{pick(locale, DOODLES[4])}</p>
+        <ArrowDoodleDownLeft className="h-8 w-12 sm:h-10 sm:w-14" />
+      </div>
       <div className="relative mt-14 grid gap-6 lg:grid-cols-3">
         <div className="pointer-events-none absolute -top-8 right-2 z-10 hidden -rotate-2 text-primary lg:right-6 lg:block">
           <p className="font-hand text-xl xl:text-2xl">{pick(locale, DOODLES[4])}</p>

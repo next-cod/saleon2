@@ -14,9 +14,13 @@ export function Faq() {
   return (
     <section id="faq" className="relative mx-auto max-w-4xl px-5 py-20 sm:px-8">
       <SectionLabel title={t.title} />
-      <div className="pointer-events-none absolute top-0 right-0 z-10 hidden -rotate-2 text-primary sm:right-4 sm:block">
+      <div className="pointer-events-none absolute top-0 right-0 z-10 hidden -rotate-2 text-primary lg:right-4 lg:block">
         <p className="font-hand text-xl sm:text-2xl">{pick(locale, DOODLES[5])}</p>
-        <ArrowDoodleDownLeft className="ml-10 h-10 w-16 sm:h-12 sm:w-20" />
+        <ArrowDoodleDownLeft className="ml-14 h-10 w-16 sm:ml-24 sm:h-12 sm:w-20" />
+      </div>
+      <div className="mt-4 flex items-center justify-end gap-2 text-primary lg:hidden">
+        <p className="-rotate-2 font-hand text-lg sm:text-xl">{pick(locale, DOODLES[5])}</p>
+        <ArrowDoodleDownLeft className="h-8 w-12 sm:h-9 sm:w-14" />
       </div>
       <div className="mt-10 space-y-3">
         {FAQ.map((item, i) => {

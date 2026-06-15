@@ -16,6 +16,10 @@ export function Team() {
         <p className="font-hand text-2xl sm:text-3xl">{pick(locale, DOODLES[3])}</p>
         <ArrowDoodleLoop className="ml-6 h-14 w-20 -scale-x-100 sm:h-16 sm:w-24" />
       </div>
+      <div className="mt-4 flex items-center justify-end gap-2 text-primary sm:hidden">
+        <p className="rotate-1 font-hand text-lg">{pick(locale, DOODLES[3])}</p>
+        <ArrowDoodleLoop className="h-10 w-14 -scale-x-100" />
+      </div>
       <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {TEAM.map((m) => (
           <article

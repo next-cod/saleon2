@@ -14,6 +14,10 @@ export function StatsBar() {
         <p className="font-hand text-xl sm:text-2xl">{pick(locale, DOODLES[1])}</p>
         <ArrowDoodleDownLeft className="ml-10 h-12 w-20 sm:h-14 sm:w-24" />
       </div>
+      <div className="mb-3 flex items-center justify-end gap-2 text-primary sm:hidden">
+        <p className="-rotate-1 font-hand text-lg">{pick(locale, DOODLES[1])}</p>
+        <ArrowDoodleDownLeft className="h-8 w-12" />
+      </div>
       <div className="grid gap-3 rounded-3xl border border-border bg-surface p-3 shadow-soft sm:grid-cols-2 lg:grid-cols-4">
         {STATS.map((s, i) => (
           <div key={i} className="relative overflow-hidden rounded-2xl bg-background p-5">

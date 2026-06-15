@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Bubble, TypingBubble, ChipRow, ChannelIcon, useChipChat, useChatScroll, ARROW_ICON } from "./shared";
-import { BlobA, BlobB, Sparkle, ArrowDoodleDownLeft } from "./Decor";
+import { BlobA, BlobB, Sparkle, ArrowDoodleDownLeft, ArrowDoodleUp } from "./Decor";
 import { useLocale, pick } from "@/lib/i18n/LocaleProvider";
 import { CHANNELS, DOODLES, UI } from "@/lib/i18n/content";
 import { BOTS } from "@/lib/i18n/personas";
@@ -60,6 +60,15 @@ export function Hero() {
           >
             {t.cta2}
           </a>
+        </div>
+
+        <div className="mt-5 flex flex-col items-center gap-1 text-primary xl:hidden">
+          <ArrowDoodleUp className="h-8 w-12 -scale-x-100" />
+          <p className="-rotate-1 text-center font-hand text-lg leading-snug sm:text-xl">
+            {heroDoodleLines[0]}
+            <br />
+            {heroDoodleLines[1]}
+          </p>
         </div>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-x-2.5 gap-y-2 lg:mt-12">
