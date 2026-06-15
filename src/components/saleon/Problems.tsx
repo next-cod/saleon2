@@ -29,8 +29,8 @@ export function Problems() {
 
       <div className="mt-12 rounded-3xl bg-gradient-primary p-8 text-center shadow-glow sm:p-10">
         <p className="mx-auto max-w-3xl text-pretty text-xl text-primary-foreground">
-          <span className="font-display font-extrabold">Сэйлон</span> создаёт цифровых сотрудников с характером.
-          Они понимают, на каком этапе находится клиент – и отвечают точно под момент.
+          <span className="font-display font-extrabold">{t.summaryBrand}</span>
+          {t.summary}
         </p>
       </div>
     </section>

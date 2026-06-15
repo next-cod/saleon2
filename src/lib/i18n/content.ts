@@ -274,7 +274,11 @@ export const UI = {
       cta2: "Посмотреть, как это работает",
       worksIn: "Работает в",
     },
-    problems: { title: "Где бизнес теряет клиентов" },
+    problems: {
+      title: "Где бизнес теряет клиентов",
+      summaryBrand: "Сэйлон",
+      summary: " создаёт цифровых сотрудников с характером. Они понимают, на каком этапе находится клиент – и отвечают точно под момент.",
+    },
     personas: {
       title: "Бот знает, что происходит с вашим клиентом",
       sub: "Выберите персонажа и состояние – посмотрите, как бот с характером отвечает в нужный момент.",
@@ -348,7 +352,11 @@ export const UI = {
       cta2: "See how it works",
       worksIn: "Works in",
     },
-    problems: { title: "Where businesses lose customers" },
+    problems: {
+      title: "Where businesses lose customers",
+      summaryBrand: "Saleon",
+      summary: " creates digital employees with personality. They understand what stage the client is at – and respond exactly to the moment.",
+    },
     personas: {
       title: "The bot knows what's happening with your client",
       sub: "Pick a character and a client state – see how a bot with personality responds at the right moment.",
