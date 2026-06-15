@@ -32,7 +32,7 @@ export function Hero() {
           <div className="relative">
             <div
               className={`pointer-events-none absolute right-full top-1/2 z-10 hidden w-max -translate-y-[200%] -rotate-2 pr-2 text-right text-primary xl:block ${
-                locale === "en" ? "-translate-x-14" : "translate-x-1"
+                locale === "en" ? "-translate-x-32" : "-translate-x-6"
               }`}
             >
               <p className="font-hand text-xl leading-[1.05] xl:text-2xl 2xl:text-3xl">
