@@ -60,10 +60,6 @@ export function Pricing() {
       </div>
 
       <div className="relative mt-8 grid gap-5 lg:grid-cols-4 lg:gap-6">
-        <div className="pointer-events-none absolute -bottom-6 right-4 z-10 hidden -rotate-3 text-primary sm:right-10 sm:block lg:right-[49%]">
-          <ArrowDoodleUp className="h-8 w-14 sm:h-10 sm:w-16" />
-          <p className="-mt-1 font-hand text-lg sm:text-xl">{pick(locale, DOODLES[2])}</p>
-        </div>
         {PLANS.map((p) => {
           const isReco = p.name === recommended.name;
           return (
@@ -73,9 +69,15 @@ export function Pricing() {
                 ${isReco ? "border-primary bg-surface shadow-glow" : "border-border bg-surface"}`}
             >
               {isReco && (
-                <span className="absolute -top-3 left-7 rounded-full bg-gradient-primary px-3 py-1 text-xs font-bold text-primary-foreground shadow-soft sm:left-8">
-                  {t.featuredBadge}
-                </span>
+                <>
+                  <span className="absolute -top-3 left-7 rounded-full bg-gradient-primary px-3 py-1 text-xs font-bold text-primary-foreground shadow-soft sm:left-8">
+                    {t.featuredBadge}
+                  </span>
+                  <div className="pointer-events-none absolute -bottom-16 right-4 z-10 hidden -rotate-3 text-primary sm:-bottom-20 sm:right-6 sm:block">
+                    <ArrowDoodleUp className="h-8 w-14 sm:h-10 sm:w-16" />
+                    <p className="-mt-1 font-hand text-lg sm:text-xl">{pick(locale, DOODLES[2])}</p>
+                  </div>
+                </>
               )}
               <div className="break-words font-display text-xl font-extrabold text-ink">{pick(locale, p.name)}</div>
               <div className="mt-2 text-sm text-muted-foreground">{pick(locale, p.lim)}</div>

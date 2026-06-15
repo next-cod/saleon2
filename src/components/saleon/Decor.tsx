@@ -45,10 +45,10 @@ export function Sparkle({ className = "" }: { className?: string }) {
 
 export function ArrowHand({ className = "" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 120 80" className={className} aria-hidden fill="none">
-      <path d="M4 8 C 38 4, 68 18, 80 52" stroke="currentColor" strokeWidth="3"
+    <svg viewBox="0 0 100 100" className={className} aria-hidden fill="none">
+      <path d="M72 6 C 56 30, 48 62, 30 90" stroke="currentColor" strokeWidth="3"
         strokeLinecap="round" />
-      <path d="M64 46 L 82 58 L 90 40" stroke="currentColor" strokeWidth="3"
+      <path d="M16 70 L 30 92 L 50 78" stroke="currentColor" strokeWidth="3"
         strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );

@@ -21,9 +21,9 @@ export function Hero() {
 
       <div className="fade-up relative mx-auto max-w-3xl px-5 pb-8 pt-16 text-center sm:px-8 sm:pb-10 sm:pt-24 lg:pb-16 lg:pt-36">
         <Sparkle className="absolute right-4 top-4 hidden h-6 w-6 rotate-12 text-primary/40 sm:right-10 sm:block" />
-        <div className="pointer-events-none absolute left-0 top-2 z-10 hidden rotate-3 text-primary sm:left-2 sm:top-6 sm:block lg:left-8">
+        <div className="pointer-events-none absolute left-0 top-2 z-10 hidden rotate-1 text-primary sm:left-2 sm:top-6 sm:block lg:left-8">
           <p className="font-hand text-lg leading-tight sm:text-xl">{pick(locale, DOODLES[0])}</p>
-          <ArrowHand className="ml-2 mt-0.5 h-9 w-16 sm:h-10 sm:w-20" />
+          <ArrowHand className="ml-2 mt-1 h-14 w-14 sm:h-20 sm:w-20" />
         </div>
         <h1 className="font-display text-5xl font-extrabold leading-[1.02] tracking-tight text-ink min-[375px]:text-6xl sm:text-7xl lg:text-8xl">
           {t.h1b}{" "}
