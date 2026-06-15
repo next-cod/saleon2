@@ -41,7 +41,11 @@ export function Hero() {
                 {heroDoodleLines[1]}
               </p>
             </div>
-            <ArrowDoodleDownLeft className="pointer-events-none absolute left-0 top-1/2 z-10 hidden h-12 w-16 translate-x-3 -translate-y-[140%] -scale-x-100 text-primary xl:block xl:h-14 xl:w-20" />
+            <ArrowDoodleDownLeft
+              className={`pointer-events-none absolute left-0 top-1/2 z-10 hidden h-12 w-16 -translate-y-[140%] -scale-x-100 text-primary xl:block xl:h-14 xl:w-20 ${
+                locale === "en" ? "-translate-x-[88px]" : "-translate-x-3"
+              }`}
+            />
             <a
               href="#hero-chat"
               className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-1px]"
