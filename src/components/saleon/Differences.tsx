@@ -5,13 +5,6 @@ import { useLocale, pick } from "@/lib/i18n/LocaleProvider";
 import { DIFFS, DIFF_CONTEXT, DIFF_IDENTITY_ROWS, DIFF_SIMPLE, UI } from "@/lib/i18n/content";
 import { CheckDoodle } from "./Decor";
 
-const EYE_ICON = (
-  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden>
-    <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2" />
-  </svg>
-);
-
 const CHECK_ICON = (
   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden>
     <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -59,11 +52,9 @@ function DiffContext() {
   return (
     <div className="space-y-2.5">
       <Bubble side="r">{pick(locale, DIFF_CONTEXT.user)}</Bubble>
-      <div className="flex justify-center">
-        <div className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-[11px] font-semibold text-muted-foreground">
-          {EYE_ICON}
-          {pick(locale, DIFF_CONTEXT.badge)}
-        </div>
+      <div className="ml-1 inline-flex items-center gap-1.5 text-[11px] font-semibold text-primary">
+        <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+        {pick(locale, DIFF_CONTEXT.badge)}
       </div>
       <Bubble side="l">{pick(locale, DIFF_CONTEXT.bot)}</Bubble>
     </div>
@@ -73,16 +64,16 @@ function DiffContext() {
 function DiffIdentity() {
   const { locale } = useLocale();
   return (
-    <div className="space-y-2">
+    <div className="divide-y divide-border">
       {DIFF_IDENTITY_ROWS.map((r) => (
-        <div key={r.img} className="flex items-start gap-3 rounded-xl border border-border bg-surface p-3">
-          <img src={r.img} alt="" className="h-9 w-9 rounded-full object-cover" />
+        <div key={r.img} className="flex items-start gap-3 py-3 first:pt-0 last:pb-0">
+          <img src={r.img} alt="" className="h-10 w-10 rounded-full object-cover ring-2 ring-border" />
           <div className="min-w-0 flex-1">
             <div className="flex items-center justify-between text-sm">
               <span className="font-semibold text-ink">{pick(locale, r.name)}</span>
               <span className="text-xs text-muted-foreground">{r.time}</span>
             </div>
-            <p className="text-sm text-muted-foreground">{pick(locale, r.msg)}</p>
+            <p className="mt-0.5 text-sm text-muted-foreground">{pick(locale, r.msg)}</p>
           </div>
         </div>
       ))}
