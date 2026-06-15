@@ -1,5 +1,6 @@
 "use client";
 
+import { Fragment } from "react";
 import { useLocale, pick } from "@/lib/i18n/LocaleProvider";
 import { DOODLES, STATS } from "@/lib/i18n/content";
 import { ArrowDoodleDownLeft, MarkerHighlight } from "./Decor";
@@ -14,13 +15,16 @@ export function StatsBar() {
         <p className="font-hand text-xl sm:text-2xl">{pick(locale, DOODLES[1])}</p>
         <ArrowDoodleDownLeft className="ml-10 h-12 w-20 sm:h-14 sm:w-24" />
       </div>
-      <div className="mb-3 flex items-center justify-end gap-2 text-primary sm:hidden">
-        <p className="-rotate-1 font-hand text-lg">{pick(locale, DOODLES[1])}</p>
-        <ArrowDoodleDownLeft className="h-8 w-12" />
-      </div>
       <div className="grid gap-3 rounded-3xl border border-border bg-surface p-3 shadow-soft sm:grid-cols-2 lg:grid-cols-4">
         {STATS.map((s, i) => (
-          <div key={i} className="relative overflow-hidden rounded-2xl bg-background p-5">
+          <Fragment key={i}>
+          {i === 2 && (
+            <div key="doodle" className="flex items-center justify-end gap-2 px-1 text-primary sm:hidden">
+              <p className="-rotate-1 font-hand text-lg">{pick(locale, DOODLES[1])}</p>
+              <ArrowDoodleDownLeft className="h-8 w-12" />
+            </div>
+          )}
+          <div className="relative overflow-hidden rounded-2xl bg-background p-5">
             <div className="absolute right-3 top-3 text-[10px] font-bold text-muted-foreground/60">0{i + 1}</div>
             <div className="font-display text-3xl font-extrabold text-ink">
               {i === 3 ? (
@@ -45,6 +49,7 @@ export function StatsBar() {
               </div>
             )}
           </div>
+          </Fragment>
         ))}
       </div>
     </section>
