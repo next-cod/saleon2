@@ -3,8 +3,8 @@
 import { useMemo, useState } from "react";
 import { SectionLabel, Eyebrow } from "./shared";
 import { useLocale, pick } from "@/lib/i18n/LocaleProvider";
-import { DOODLES, PLANS, PRICING_FEATURES, UI } from "@/lib/i18n/content";
-import { ArrowDoodleUp, CheckDoodle } from "./Decor";
+import { PLANS, PRICING_FEATURES, UI } from "@/lib/i18n/content";
+import { CheckDoodle } from "./Decor";
 
 export function Pricing() {
   const { locale } = useLocale();
@@ -72,12 +72,6 @@ export function Pricing() {
                 <span className="absolute -top-3 left-7 -rotate-3 rounded-full bg-gradient-primary px-3 py-1 text-xs font-bold text-primary-foreground shadow-soft sm:left-8">
                   {t.featuredBadge}
                 </span>
-              )}
-              {isReco && (
-                <div className="mb-2 hidden items-center justify-end gap-1.5 text-primary sm:flex">
-                  <p className="-rotate-1 font-hand text-sm sm:text-base">{pick(locale, DOODLES[2])}</p>
-                  <ArrowDoodleUp className="h-5 w-8 shrink-0 -rotate-12" />
-                </div>
               )}
               <div className="break-words font-display text-xl font-extrabold text-ink">{pick(locale, p.name)}</div>
               <div className="mt-2 text-sm text-muted-foreground">{pick(locale, p.lim)}</div>
