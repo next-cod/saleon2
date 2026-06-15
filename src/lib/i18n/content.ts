@@ -255,7 +255,7 @@ export const CONTACT_PS: { before: Bi; after: Bi; sign: string; tgHandle: string
 /* ---------- doodle annotations ---------- */
 
 export const DOODLES: Bi[] = [
-  { ru: "начните прямо здесь – это займёт 2 минуты", en: "start right here – takes 2 minutes" },
+  { ru: "Начните прямо здесь – Это займёт 2 минуты", en: "Start right here – It takes 2 minutes" },
   { ru: "серьёзно, и в 3 часа ночи тоже", en: "seriously, even at 3am" },
   { ru: "большинство выбирает этот", en: "most people pick this one" },
   { ru: "это реальная команда – фото настоящие", en: "real team – these are actual photos" },

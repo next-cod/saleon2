@@ -11,6 +11,7 @@ import { HERO_CHATS } from "@/lib/i18n/heroChats";
 export function Hero() {
   const { locale } = useLocale();
   const t = UI[locale].hero;
+  const heroDoodleLines = pick(locale, DOODLES[0]).split(" – ");
 
   return (
     <section className="relative isolate">
@@ -27,20 +28,22 @@ export function Hero() {
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-pretty text-lg text-muted-foreground">{t.sub}</p>
 
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:mt-20 lg:mt-24">
-          <div className="relative">
-            <a
-              href="#contacts"
-              className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-1px]"
-            >
-              {t.cta1}
-              <span className="transition group-hover:translate-x-0.5">{ARROW_ICON}</span>
-            </a>
-            <div className="pointer-events-none absolute bottom-full right-0 z-10 hidden -mb-2 rotate-1 text-primary sm:-mb-3 sm:block">
-              <p className="whitespace-nowrap font-hand text-lg leading-tight sm:text-xl">{pick(locale, DOODLES[0])}</p>
-              <ArrowHand className="ml-auto mt-1 h-14 w-14 sm:h-20 sm:w-20" />
-            </div>
+        <div className="relative mt-8 flex flex-wrap items-center justify-center gap-3 lg:mt-10">
+          <div className="pointer-events-none absolute right-full top-1/2 z-10 hidden w-max -translate-y-1/2 -rotate-2 pr-4 text-right text-primary xl:block">
+            <p className="font-hand text-xl leading-snug xl:text-2xl 2xl:text-3xl">
+              {heroDoodleLines[0]}
+              <br />
+              {heroDoodleLines[1]}
+            </p>
+            <ArrowHand className="ml-auto mt-1 h-14 w-14 -scale-x-100 xl:h-16 xl:w-16 2xl:h-20 2xl:w-20" />
           </div>
+          <a
+            href="#contacts"
+            className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-1px]"
+          >
+            {t.cta1}
+            <span className="transition group-hover:translate-x-0.5">{ARROW_ICON}</span>
+          </a>
           <a
             href="#personas"
             className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-6 py-3.5 text-sm font-semibold text-ink shadow-sm transition hover:border-primary/30 hover:text-primary"

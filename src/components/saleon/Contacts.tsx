@@ -46,6 +46,17 @@ export function Contacts() {
               </a>
               {pick(locale, CONTACT_PS.after)} <span className="whitespace-nowrap">– {CONTACT_PS.sign}</span>
             </p>
+            <p className="-rotate-1 pl-1 font-hand text-lg text-primary sm:text-xl">
+              Telegram:{" "}
+              <a
+                href={`https://t.me/${CONTACT_PS.tgHandle}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                @{CONTACT_PS.tgHandle}
+              </a>
+            </p>
           </div>
 
           <form onSubmit={(e) => e.preventDefault()} className="relative rounded-3xl border border-border bg-surface p-6 shadow-soft sm:p-8">
