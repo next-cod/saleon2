@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { SectionLabel, Eyebrow } from "./shared";
 import { useLocale, pick } from "@/lib/i18n/LocaleProvider";
 import { DOODLES, PLANS, PRICING_FEATURES, UI } from "@/lib/i18n/content";
-import { ArrowDoodleUp, CheckDoodle, MarkerHighlight } from "./Decor";
+import { ArrowDoodleUp, CheckDoodle } from "./Decor";
 
 export function Pricing() {
   const { locale } = useLocale();
@@ -122,10 +122,7 @@ export function Pricing() {
         <div className="relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-primary-soft/70 to-transparent p-7 shadow-soft">
           <Eyebrow tone="primary">{t.turnkeyTitle}</Eyebrow>
           <div className="mt-2 flex items-baseline gap-3">
-            <span className="relative inline-block">
-              <MarkerHighlight className="absolute -inset-x-2 -inset-y-1 -z-10 text-mint/40" />
-              <span className="relative font-display text-3xl font-extrabold text-ink">{t.turnkeyPrice}</span>
-            </span>
+            <span className="font-display text-3xl font-extrabold text-ink">{t.turnkeyPrice}</span>
             <span className="text-sm text-muted-foreground line-through">{t.turnkeyOldPrice}</span>
           </div>
           <p className="mt-2 text-sm text-foreground">{t.turnkeyDesc}</p>

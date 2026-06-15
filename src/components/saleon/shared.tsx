@@ -142,8 +142,6 @@ export function useChatScroll(resetKey: unknown, messageCount: number, typing: b
   return { ref, style };
 }
 
-const CHIP_HINT: Bi = { ru: "Выберите вариант ответа", en: "Choose a reply" };
-
 export function ChipRow({
   chips,
   used,
@@ -158,7 +156,6 @@ export function ChipRow({
   if (visible.length === 0) return null;
   return (
     <div className="pt-1.5">
-      <div className="mb-1.5 text-[10px] font-semibold text-muted-foreground/70">{pick(locale, CHIP_HINT)}</div>
       <div className="flex flex-wrap gap-2">
         {visible.map(({ c, i }) => (
           <button

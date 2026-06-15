@@ -99,9 +99,6 @@ export function Personas() {
               </div>
               <div className="rounded-full bg-primary-soft px-2.5 py-1 text-[11px] font-semibold text-primary">{pick(locale, state.badge)}</div>
             </div>
-            <div className="mt-3 rounded-xl bg-muted/60 p-3 text-xs text-muted-foreground">
-              <span className="font-semibold text-ink">{t.situation}</span> {pick(locale, state.intent)}
-            </div>
             <div ref={chatRef} style={chatStyle} className="mt-4 space-y-2.5">
               <Bubble side="r">{pick(locale, state.uMsg)}</Bubble>
               <Bubble side="l">{state.bMsg(bot, locale)}</Bubble>

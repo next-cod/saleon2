@@ -14,7 +14,7 @@ export function Faq() {
   return (
     <section id="faq" className="relative mx-auto max-w-4xl px-5 py-20 sm:px-8">
       <SectionLabel title={t.title} />
-      <div className="pointer-events-none absolute -top-6 right-0 z-10 hidden -rotate-2 text-primary sm:right-4 sm:block">
+      <div className="pointer-events-none absolute -top-2 right-0 z-10 hidden -rotate-2 text-primary sm:right-4 sm:block">
         <p className="font-hand text-xl sm:text-2xl">{pick(locale, DOODLES[5])}</p>
         <ArrowDoodleDownLeft className="ml-10 h-10 w-16 sm:h-12 sm:w-20" />
       </div>

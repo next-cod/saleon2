@@ -3,6 +3,7 @@
 import { SectionLabel, Bubble } from "./shared";
 import { useLocale, pick } from "@/lib/i18n/LocaleProvider";
 import { DIFFS, DIFF_CONTEXT, DIFF_IDENTITY_ROWS, DIFF_SIMPLE, UI } from "@/lib/i18n/content";
+import { CheckDoodle } from "./Decor";
 
 const EYE_ICON = (
   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden>
@@ -103,9 +104,7 @@ function DiffSimple() {
           {DIFF_SIMPLE.yes.map((y, i) => (
             <li key={i} className="flex items-start gap-2 text-sm text-ink">
               <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-mint/15 text-mint">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
-                  <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+                <CheckDoodle className="h-3 w-3" />
               </span>
               {pick(locale, y)}
             </li>
@@ -119,8 +118,8 @@ function DiffSimple() {
         </div>
         <ul className="mt-3 space-y-2">
           {DIFF_SIMPLE.no.map((y, i) => (
-            <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground line-through">
-              <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-muted text-muted-foreground">×</span>
+            <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-muted-foreground/30" />
               {pick(locale, y)}
             </li>
           ))}

@@ -286,7 +286,6 @@ export const UI = {
       sub: "Выберите персонажа и состояние – посмотрите, как бот с характером отвечает в нужный момент.",
       choose: "Выберите персонажа",
       clientState: "Состояние клиента",
-      situation: "Ситуация:",
       online: "онлайн",
       cta: "Хочу такого бота для своего бизнеса",
     },
@@ -342,7 +341,7 @@ export const UI = {
       desc: "Цифровые сотрудники с именем и характером. Понимают, на каком этапе клиент – и отвечают точно под момент.",
       copy: "Saleon. Все права защищены.",
       madeWith: "Сделано с ❤ для бизнеса, который ценит время",
-      signature: "— команда Saleon 👋",
+      signature: "— команда Saleon",
     },
   },
   en: {
@@ -365,7 +364,6 @@ export const UI = {
       sub: "Pick a character and a client state – see how a bot with personality responds at the right moment.",
       choose: "Choose a character",
       clientState: "Client status",
-      situation: "Situation:",
       online: "online",
       cta: "I want a bot like this for my business",
     },
@@ -421,7 +419,7 @@ export const UI = {
       desc: "Digital employees with a name and personality. They understand what stage the client is at – and respond right for the moment.",
       copy: "Saleon. All rights reserved.",
       madeWith: "Made with ❤ for businesses that value their time",
-      signature: "— the Saleon team 👋",
+      signature: "— the Saleon team",
     },
   },
 } satisfies Record<Locale, unknown>;
