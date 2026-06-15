@@ -12,7 +12,7 @@ export function Team() {
   return (
     <section id="team" className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8">
       <SectionLabel title={t.title} />
-      <div className="pointer-events-none absolute right-6 top-2 z-10 hidden rotate-3 text-primary sm:right-16 sm:top-6 sm:block">
+      <div className="pointer-events-none absolute right-6 top-2 z-10 hidden rotate-3 text-primary sm:right-16 sm:-top-6 sm:block">
         <p className="font-hand text-2xl sm:text-3xl">{pick(locale, DOODLES[3])}</p>
         <ArrowDoodleLoop className="ml-6 h-14 w-20 -scale-x-100 sm:h-16 sm:w-24" />
       </div>
