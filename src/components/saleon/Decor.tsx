@@ -57,9 +57,9 @@ export function ArrowHand({ className = "" }: { className?: string }) {
 export function ArrowDoodleDownLeft({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 120 80" className={className} aria-hidden fill="none">
-      <path d="M114 6 C 96 13, 34 26, 22 60" stroke="currentColor" strokeWidth="3"
+      <path d="M112 8 C 94 18, 58 42, 28 58" stroke="currentColor" strokeWidth="3"
         strokeLinecap="round" />
-      <path d="M38 48 L 20 64 L 8 40" stroke="currentColor" strokeWidth="3"
+      <path d="M38 45 L 28 58 L 44 57" stroke="currentColor" strokeWidth="3"
         strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
