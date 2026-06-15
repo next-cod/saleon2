@@ -20,9 +20,9 @@ export function Faq() {
       <div className="mt-2 lg:mt-0">
         <SectionLabel title={t.title} />
       </div>
-      <div className="pointer-events-none absolute top-0 right-0 z-10 hidden -rotate-2 text-primary lg:right-4 lg:block">
-        <p className="font-hand text-xl sm:text-2xl">{pick(locale, DOODLES[5])}</p>
-        <ArrowDoodleDownLeft className="ml-14 h-10 w-16 sm:ml-24 sm:h-12 sm:w-20" />
+      <div className="pointer-events-none absolute top-2 right-12 z-10 hidden -rotate-2 text-primary lg:right-16 lg:block">
+        <p className="font-hand text-lg sm:text-xl">{pick(locale, DOODLES[5])}</p>
+        <ArrowDoodleDownLeft className="ml-10 h-8 w-12 sm:ml-14 sm:h-9 sm:w-14" />
       </div>
       <div className="mt-10 space-y-3">
         {FAQ.map((item, i) => {
