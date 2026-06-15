@@ -246,17 +246,17 @@ export const CONTACT_NICHES: Bi[] = [
 ];
 
 export const CONTACT_PS: { text: Bi; sign: string } = {
-  text: { ru: "Если что-то непонятно — пишите прямо сюда, отвечу сама", en: "If anything's unclear — write right here, I'll reply myself" },
+  text: { ru: "Если что-то непонятно – пишите прямо сюда, отвечу сама", en: "If anything's unclear – write right here, I'll reply myself" },
   sign: "Татьяна",
 };
 
 /* ---------- doodle annotations ---------- */
 
 export const DOODLES: Bi[] = [
-  { ru: "начните прямо здесь — это займёт 2 минуты", en: "start right here — takes 2 minutes" },
+  { ru: "начните прямо здесь – это займёт 2 минуты", en: "start right here – takes 2 minutes" },
   { ru: "серьёзно, и в 3 часа ночи тоже", en: "seriously, even at 3am" },
   { ru: "большинство выбирает этот", en: "most people pick this one" },
-  { ru: "это реальная команда — фото настоящие", en: "real team — these are actual photos" },
+  { ru: "это реальная команда – фото настоящие", en: "real team – these are actual photos" },
 ];
 
 /* ---------- general UI strings ---------- */

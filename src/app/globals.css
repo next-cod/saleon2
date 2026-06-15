@@ -118,13 +118,13 @@
     font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+  h1, h2, h3, h4 { font-family: var(--font-manrope), var(--font-inter), ui-sans-serif, system-ui, sans-serif; letter-spacing: -0.02em; }
 
 }
 
 @layer utilities {
-  .font-display { font-family: var(--font-display); }
-  .font-hand { font-family: var(--font-hand); }
+  .font-display { font-family: var(--font-manrope), var(--font-inter), ui-sans-serif, system-ui, sans-serif; }
+  .font-hand { font-family: var(--font-caveat), cursive; }
   .text-balance { text-wrap: balance; }
   .text-pretty { text-wrap: pretty; }
 

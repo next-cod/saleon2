@@ -35,7 +35,7 @@ export function Contacts() {
               </div>
             </div>
             <p className="mt-4 -rotate-1 pl-1 font-hand text-lg text-primary sm:text-xl">
-              P.S. {pick(locale, CONTACT_PS.text)} <span className="whitespace-nowrap">— {CONTACT_PS.sign}</span>
+              P.S. {pick(locale, CONTACT_PS.text)} <span className="whitespace-nowrap">– {CONTACT_PS.sign}</span>
             </p>
           </div>
 
