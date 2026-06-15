@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Bubble, TypingBubble, ChipRow, ChannelIcon, useChipChat, useChatScroll, ARROW_ICON } from "./shared";
-import { BlobA, BlobB, Sparkle, ArrowHand } from "./Decor";
+import { BlobA, BlobB, Sparkle, ArrowDoodleDownLeft } from "./Decor";
 import { useLocale, pick } from "@/lib/i18n/LocaleProvider";
 import { CHANNELS, DOODLES, UI } from "@/lib/i18n/content";
 import { BOTS } from "@/lib/i18n/personas";
@@ -29,14 +29,14 @@ export function Hero() {
         <p className="mx-auto mt-6 max-w-xl text-pretty text-lg text-muted-foreground">{t.sub}</p>
 
         <div className="relative mt-8 flex flex-wrap items-center justify-center gap-3 lg:mt-10">
-          <div className="pointer-events-none absolute right-full top-1/2 z-10 hidden w-max -translate-y-[80%] -rotate-2 pr-2 text-right text-primary xl:block">
-            <p className="font-hand text-base leading-[1.05] xl:text-lg 2xl:text-xl">
+          <div className="pointer-events-none absolute right-full top-1/2 z-10 hidden w-max -translate-y-[200%] -rotate-2 pr-2 text-right text-primary xl:block">
+            <p className="font-hand text-xl leading-[1.05] xl:text-2xl 2xl:text-3xl">
               {heroDoodleLines[0]}
               <br />
               {heroDoodleLines[1]}
             </p>
           </div>
-          <ArrowHand className="pointer-events-none absolute left-0 top-1/2 z-10 hidden h-12 w-12 -translate-y-[55%] -rotate-3 -scale-x-100 text-primary xl:block xl:h-14 xl:w-14" />
+          <ArrowDoodleDownLeft className="pointer-events-none absolute left-0 top-1/2 z-10 hidden h-12 w-16 -translate-y-[130%] -scale-x-100 text-primary xl:block xl:h-14 xl:w-20" />
           <a
             href="#hero-chat"
             className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-1px]"
