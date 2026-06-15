@@ -21,24 +21,26 @@ export function Hero() {
 
       <div className="fade-up relative mx-auto max-w-3xl px-5 pb-8 pt-16 text-center sm:px-8 sm:pb-10 sm:pt-24 lg:pb-16 lg:pt-36">
         <Sparkle className="absolute right-4 top-4 hidden h-6 w-6 rotate-12 text-primary/40 sm:right-10 sm:block" />
-        <div className="pointer-events-none absolute left-0 top-2 z-10 hidden rotate-1 text-primary sm:left-2 sm:top-6 sm:block lg:left-8">
-          <p className="font-hand text-lg leading-tight sm:text-xl">{pick(locale, DOODLES[0])}</p>
-          <ArrowHand className="ml-2 mt-1 h-14 w-14 sm:h-20 sm:w-20" />
-        </div>
         <h1 className="font-display text-5xl font-extrabold leading-[1.02] tracking-tight text-ink min-[375px]:text-6xl sm:text-7xl lg:text-8xl">
           {t.h1b}{" "}
           <span className="text-gradient">{t.h1highlight}</span>
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-pretty text-lg text-muted-foreground">{t.sub}</p>
 
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:mt-10">
-          <a
-            href="#contacts"
-            className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-1px]"
-          >
-            {t.cta1}
-            <span className="transition group-hover:translate-x-0.5">{ARROW_ICON}</span>
-          </a>
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:mt-20 lg:mt-24">
+          <div className="relative">
+            <a
+              href="#contacts"
+              className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-1px]"
+            >
+              {t.cta1}
+              <span className="transition group-hover:translate-x-0.5">{ARROW_ICON}</span>
+            </a>
+            <div className="pointer-events-none absolute bottom-full right-0 z-10 hidden -mb-2 rotate-1 text-primary sm:-mb-3 sm:block">
+              <p className="whitespace-nowrap font-hand text-lg leading-tight sm:text-xl">{pick(locale, DOODLES[0])}</p>
+              <ArrowHand className="ml-auto mt-1 h-14 w-14 sm:h-20 sm:w-20" />
+            </div>
+          </div>
           <a
             href="#personas"
             className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-6 py-3.5 text-sm font-semibold text-ink shadow-sm transition hover:border-primary/30 hover:text-primary"

@@ -245,9 +245,11 @@ export const CONTACT_NICHES: Bi[] = [
   { ru: "Другое", en: "Other" },
 ];
 
-export const CONTACT_PS: { text: Bi; sign: string } = {
-  text: { ru: "Если что-то непонятно – пишите прямо сюда, отвечу сама", en: "If anything's unclear – write right here, I'll reply myself" },
+export const CONTACT_PS: { before: Bi; after: Bi; sign: string; tgHandle: string } = {
+  before: { ru: "Если что-то непонятно – пишите в", en: "If anything's unclear – message me on" },
+  after: { ru: ", отвечу сама", en: ", I'll reply myself" },
   sign: "Татьяна",
+  tgHandle: "UlanovaTatyana",
 };
 
 /* ---------- doodle annotations ---------- */

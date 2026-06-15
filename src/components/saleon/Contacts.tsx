@@ -35,7 +35,16 @@ export function Contacts() {
               </div>
             </div>
             <p className="mt-4 -rotate-1 pl-1 font-hand text-lg text-primary sm:text-xl">
-              P.S. {pick(locale, CONTACT_PS.text)} <span className="whitespace-nowrap">– {CONTACT_PS.sign}</span>
+              P.S. {pick(locale, CONTACT_PS.before)}{" "}
+              <a
+                href={`https://t.me/${CONTACT_PS.tgHandle}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                Telegram
+              </a>
+              {pick(locale, CONTACT_PS.after)} <span className="whitespace-nowrap">– {CONTACT_PS.sign}</span>
             </p>
           </div>
 
